@@ -39,7 +39,9 @@ function App() {
             <Services />
           </section>
           
-          <USPs />
+          <section id="why-choose-us">
+            <USPs />
+          </section>
           <Commitment />
           <ResultsCounter />
           

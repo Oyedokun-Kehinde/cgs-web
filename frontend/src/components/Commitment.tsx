@@ -65,7 +65,7 @@ const Commitment = () => {
             </p>
             
             <a href="#contact" className="btn btn-primary mt-3">
-              Start Your Partnership
+              Get Started 
             </a>
           </div>
 

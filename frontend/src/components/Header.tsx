@@ -17,6 +17,7 @@ const Header = () => {
     { to: 'home', label: 'Home' },
     { to: 'about', label: 'About' },
     { to: 'services', label: 'Services' },
+    { to: 'why-choose-us', label: 'Why Choose Us' },
     { to: 'locations', label: 'Locations' },
     { to: 'contact', label: 'Contact' },
   ]
