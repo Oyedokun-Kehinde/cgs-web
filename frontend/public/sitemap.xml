@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://coopergamingservices.com/</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://coopergamingservices.com/images/hero/hero-1.jpg</image:loc>
+      <image:title>Professional Gaming Machine Solutions</image:title>
+      <image:caption>Queensland's premier gaming machine specialists</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://coopergamingservices.com/#about</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://coopergamingservices.com/images/about/team.jpg</image:loc>
+      <image:title>Cooper Gaming Services Team</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Services Section -->
+  <url>
+    <loc>https://coopergamingservices.com/#services</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://coopergamingservices.com/images/services/service-sales.jpg</image:loc>
+      <image:title>Gaming Machine Sales</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://coopergamingservices.com/images/services/service-repairs.jpg</image:loc>
+      <image:title>Technical Service & Repairs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://coopergamingservices.com/images/services/service-maintenance.jpg</image:loc>
+      <image:title>Preventative Maintenance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://coopergamingservices.com/images/services/service-consultation.jpg</image:loc>
+      <image:title>Consultation & Installation</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Locations Section -->
+  <url>
+    <loc>https://coopergamingservices.com/#locations</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://coopergamingservices.com/#contact</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+</urlset>
