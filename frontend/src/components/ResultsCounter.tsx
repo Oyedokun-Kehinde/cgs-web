@@ -53,7 +53,7 @@ const ResultsCounter = () => {
         <div className="row text-center">
           {stats.map((stat, index) => (
             <div 
-              className="col-lg-3 col-md-6 mb-4 mb-lg-0" 
+              className="col-lg-3 col-md-6 col-6 mb-4 mb-lg-0" 
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
