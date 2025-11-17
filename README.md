@@ -83,7 +83,7 @@ Cooper Gaming Services website is a comprehensive business solution for the gami
 ### SEO (Comprehensive)
 - 📊 **Complete Meta Tags** - Title, description, OG, Twitter cards
 - 🏢 **Local Business Schema** - JSON-LD structured data
-- 🗺️ **Geographic Targeting** - Brisbane, Queensland optimization
+- 🗺️ **Geographic Targeting** - Bundaberg, Gympie, Hervey Bay, Maryborough (Queensland) optimization
 - 🤖 **robots.txt & sitemap.xml** - Search engine configuration
 - 🚀 **Technical SEO** - .htaccess, caching, compression
 - 📱 **Mobile SEO** - Responsive, fast, touch-friendly
@@ -159,7 +159,7 @@ npm --version   # v9.0.0+
 
 1. **Clone repository:**
 ```bash
-git clone https://gitlab.com/your-username/cgs-web.git
+git clone https://github.com/Oyedokun-Kehinde/cgs-web.git
 cd cgs-web
 ```
 
@@ -244,7 +244,7 @@ FRONTEND_URL=http://localhost:3000
 #### 1. Meta Tags (index.html)
 - ✅ Title tag (60 chars optimized)
 - ✅ Description (155 chars)
-- ✅ Keywords targeting Queensland/Brisbane
+- ✅ Keywords targeting Queensland (Bundaberg, Gympie, Hervey Bay, Maryborough)
 - ✅ Open Graph (Facebook/LinkedIn preview)
 - ✅ Twitter Cards
 - ✅ Geographic tags (AU-QLD)
@@ -257,7 +257,7 @@ FRONTEND_URL=http://localhost:3000
   "name": "Cooper Gaming Services",
   "telephone": "+61712345678",
   "address": {
-    "addressLocality": "Brisbane",
+    "addressLocality": "Bundaberg",
     "addressRegion": "Queensland"
   },
   "openingHours": "Mo-Fr 08:00-18:00",
@@ -291,8 +291,8 @@ FRONTEND_URL=http://localhost:3000
 
 ### Target Keywords
 - Primary: "gaming machines Queensland"
-- Secondary: "poker machines Brisbane"
-- Long-tail: "gaming machine repairs Brisbane 24/7"
+- Secondary: "gaming machines Bundaberg", "gaming machines Hervey Bay"
+- Long-tail: "gaming machine repairs Bundaberg 24/7", "poker machine service Maryborough"
 
 ### Post-Launch SEO Tasks
 1. ✅ Submit sitemap to Google Search Console
@@ -2473,7 +2473,7 @@ A **professional, production-ready website** built with modern technologies:
 4. **Email Integration** - Automated notifications and confirmations
 5. **Security Built-In** - Rate limiting, validation, CORS, Helmet
 6. **Professional Design** - Smooth animations, great UX
-7. **Local SEO Ready** - Optimized for Queensland/Brisbane
+7. **Local SEO Ready** - Optimized for Queensland (Bundaberg, Gympie, Hervey Bay, Maryborough)
 
 ### Expected Results (6 months)
 - **Monthly Visitors:** 200-500+
