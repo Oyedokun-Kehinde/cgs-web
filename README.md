@@ -1325,48 +1325,726 @@ VITE_API_URL=https://your-backend.railway.app
 
 ---
 
-### Option 3: Vercel (Full-Stack)
+### Option 3: Vercel (Full-Stack) ⭐ RECOMMENDED
 
-**Best for:** Serverless, edge functions, fastest deployment
+**Best for:** Serverless architecture, automatic HTTPS, fastest deployment, zero configuration
 
-1. **Install Vercel CLI:**
+**Why Vercel is Recommended:**
+- ✅ Free tier (100GB bandwidth/month)
+- ✅ Automatic HTTPS with Let's Encrypt
+- ✅ Global CDN (fast loading worldwide)
+- ✅ Automatic deployments from Git
+- ✅ Preview deployments for branches/PRs
+- ✅ Built-in analytics
+- ✅ Serverless backend functions
+- ✅ Environment variable management
+- ✅ Custom domain support
+- ✅ Edge network optimization
+- ✅ Perfect for React + Node.js apps
+
+---
+
+## 🚀 Complete Vercel Deployment Guide
+
+This project is fully configured for Vercel with `vercel.json` already created.
+
+### Prerequisites
+
+- **Git Repository:** Code must be in a Git repository (GitHub, GitLab, or Bitbucket)
+- **Vercel Account:** Free account at https://vercel.com
+- **Environment Variables:** Have your `.env` values ready
+
+---
+
+### Method 1: Deploy via Vercel Dashboard (Easiest)
+
+#### Step 1: Create Vercel Account
+
+1. Go to: https://vercel.com
+2. Click "Sign Up"
+3. Choose "Continue with GitHub" (or GitLab/Bitbucket)
+4. Authorize Vercel to access your repositories
+
+#### Step 2: Import Project
+
+1. Click "Add New..." → "Project"
+2. Select your Git provider (GitHub/GitLab/Bitbucket)
+3. Find and select the `cgs-web` repository
+4. Click "Import"
+
+#### Step 3: Configure Project
+
+Vercel will auto-detect the configuration from `vercel.json`, but verify:
+
+**Framework Preset:** Vite  
+**Root Directory:** `./` (leave as root)  
+**Build Command:** `cd frontend && npm run build`  
+**Output Directory:** `frontend/dist`  
+**Install Command:** Auto-detected
+
+#### Step 4: Add Environment Variables
+
+Click "Environment Variables" and add the following:
+
+**Required Variables:**
+```
+NODE_ENV=production
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+ADMIN_EMAIL=admin@coopergamingservices.com
+FRONTEND_URL=https://your-domain.vercel.app
+```
+
+**Important Notes:**
+- Set each variable for **Production**, **Preview**, and **Development** environments
+- For `FRONTEND_URL`, use `https://cgs-web.vercel.app` initially (Vercel will auto-assign this)
+- You can update it later with your custom domain
+
+#### Step 5: Deploy
+
+1. Click "Deploy"
+2. Wait 2-3 minutes for build to complete
+3. You'll get a live URL like: `https://cgs-web-xxx.vercel.app`
+4. Click "Visit" to see your deployed site
+
+**🎉 Your site is now live!**
+
+---
+
+### Method 2: Deploy via Vercel CLI (Advanced)
+
+For developers who prefer command-line deployment:
+
+#### Step 1: Install Vercel CLI
+
 ```bash
 npm install -g vercel
 ```
 
-2. **Login:**
+#### Step 2: Login to Vercel
+
 ```bash
 vercel login
 ```
 
-3. **Deploy:**
+Follow the prompts to authenticate via email.
+
+#### Step 3: Link Project
+
 ```bash
-cd cgs-web
+cd c:\Users\oyedo\Desktop\Athena\projects\cgs-web
 vercel
 ```
 
-4. **Follow prompts:**
-   - Set up and deploy: Y
-   - Which scope: (your account)
-   - Link to existing project: N
-   - Project name: cgs-web
-   - Directory: ./
-   - Override settings: N
+**Prompts and Answers:**
+```
+? Set up and deploy "cgs-web"? [Y/n] Y
+? Which scope? → Select your account/team
+? Link to existing project? [y/N] N
+? What's your project's name? cgs-web
+? In which directory is your code located? ./
+```
 
-5. **Configure:**
-   - Dashboard → Settings → Environment Variables
-   - Add backend `.env` variables
-   - Redeploy
+Vercel will automatically:
+- Detect `vercel.json` configuration
+- Install dependencies for frontend and backend
+- Build the frontend
+- Deploy serverless functions for backend
 
-6. **Production deployment:**
+#### Step 4: Set Environment Variables via CLI
+
+```bash
+# Set production environment variables
+vercel env add SMTP_HOST production
+vercel env add SMTP_PORT production
+vercel env add SMTP_SECURE production
+vercel env add SMTP_USER production
+vercel env add SMTP_PASS production
+vercel env add ADMIN_EMAIL production
+vercel env add FRONTEND_URL production
+vercel env add NODE_ENV production
+```
+
+Enter the values when prompted for each variable.
+
+#### Step 5: Deploy to Production
+
 ```bash
 vercel --prod
 ```
 
-**Custom domain:**
-- Dashboard → Settings → Domains
-- Add domain
-- Update DNS
+**Output:**
+```
+✔ Production: https://cgs-web.vercel.app [3m]
+```
+
+---
+
+### Method 3: Automatic Deployments (Git Integration)
+
+Once connected to Git, every push triggers automatic deployment:
+
+**How it Works:**
+1. Push to `main` branch → Production deployment
+2. Push to other branches → Preview deployment
+3. Open Pull Request → Preview deployment with unique URL
+
+**Setup:**
+1. Connect repository in Vercel Dashboard
+2. Select "Git Integration" settings
+3. Choose "Automatic Deployments" (enabled by default)
+4. Set production branch to `main` or `master`
+
+**Benefits:**
+- Zero-downtime deployments
+- Automatic rollback on build failures
+- Preview every change before merging
+- Deployment history and logs
+
+---
+
+### Environment Variables Management
+
+#### Required Backend Variables
+
+| Variable | Value | Description |
+|----------|-------|-------------|
+| `NODE_ENV` | `production` | Environment mode |
+| `SMTP_HOST` | `smtp.gmail.com` | Email server host |
+| `SMTP_PORT` | `465` | Email server port |
+| `SMTP_SECURE` | `true` | Use SSL/TLS |
+| `SMTP_USER` | Your Gmail | Email account |
+| `SMTP_PASS` | App Password | 16-char Gmail app password |
+| `ADMIN_EMAIL` | Your email | Where form submissions go |
+| `FRONTEND_URL` | Vercel URL | For CORS (e.g., `https://cgs-web.vercel.app`) |
+
+#### How to Add/Edit Variables
+
+**Via Dashboard:**
+1. Project → Settings → Environment Variables
+2. Click "Add New"
+3. Enter key and value
+4. Select environments (Production, Preview, Development)
+5. Click "Save"
+6. Redeploy for changes to take effect
+
+**Via CLI:**
+```bash
+# Add variable
+vercel env add VARIABLE_NAME production
+
+# List all variables
+vercel env ls
+
+# Remove variable
+vercel env rm VARIABLE_NAME production
+```
+
+**Important:** After adding/changing variables, trigger a new deployment:
+```bash
+vercel --prod
+```
+
+---
+
+### Custom Domain Configuration
+
+#### Step 1: Add Domain in Vercel
+
+1. Project Dashboard → Settings → Domains
+2. Click "Add"
+3. Enter your domain: `coopergamingservices.com`
+4. Click "Add"
+
+#### Step 2: Configure DNS
+
+Vercel provides two options:
+
+**Option A: Nameservers (Recommended)**
+1. Vercel shows nameservers: `ns1.vercel-dns.com`, `ns2.vercel-dns.com`
+2. Go to your domain registrar (GoDaddy, Namecheap, etc.)
+3. Change nameservers to Vercel's
+4. Wait 24-48 hours for propagation
+
+**Option B: CNAME Records**
+1. Add CNAME record in your DNS:
+   ```
+   Type: CNAME
+   Name: www
+   Value: cname.vercel-dns.com
+   ```
+2. Add A record for root domain:
+   ```
+   Type: A
+   Name: @
+   Value: 76.76.21.21
+   ```
+
+#### Step 3: Verify & Enable HTTPS
+
+1. Vercel automatically provisions SSL certificate
+2. HTTPS enabled within minutes
+3. HTTP automatically redirects to HTTPS
+
+#### Step 4: Update Environment Variables
+
+After domain is live, update:
+```bash
+vercel env add FRONTEND_URL production
+# Enter: https://coopergamingservices.com
+```
+
+Redeploy:
+```bash
+vercel --prod
+```
+
+---
+
+### Frontend Configuration for Vercel
+
+The frontend is already configured via `vercel.json`. No changes needed!
+
+**What's Configured:**
+- Build command: `npm run build` in frontend directory
+- Output directory: `frontend/dist`
+- Framework: Vite with React
+- Static file serving from `dist/`
+- Automatic asset optimization
+
+---
+
+### Backend Configuration for Vercel
+
+The backend runs as **Vercel Serverless Functions**.
+
+**Project Structure for Serverless:**
+```
+backend/
+├── api/                    # Serverless functions
+│   ├── contact.js         # /api/contact endpoint
+│   └── health.js          # /api/health endpoint
+├── controllers/           # Shared business logic
+├── utils/                 # Email service, validation
+├── server.js             # Traditional Express (for local dev)
+└── package.json
+```
+
+**How It Works:**
+1. Each file in `backend/api/` becomes an API endpoint
+2. `api/contact.js` → `https://your-domain.vercel.app/api/contact`
+3. Functions are executed on-demand (serverless)
+4. Automatic scaling (handles traffic spikes)
+5. Cold start: ~100-300ms (first request after idle)
+
+**API Endpoints:**
+- `POST /api/contact` - Contact form submission
+- `GET /api/health` - Health check
+
+---
+
+### Testing Your Deployment
+
+#### 1. Frontend Testing
+
+Visit your Vercel URL: `https://cgs-web.vercel.app`
+
+**Check:**
+- [ ] Page loads without errors
+- [ ] All sections visible (Hero, About, Services, etc.)
+- [ ] Images load correctly
+- [ ] Navigation works
+- [ ] Mobile responsive
+- [ ] No console errors (F12 → Console tab)
+
+#### 2. Backend API Testing
+
+**Health Check:**
+```bash
+curl https://cgs-web.vercel.app/api/health
+```
+
+**Expected Response:**
+```json
+{
+  "status": "OK",
+  "message": "Server is running",
+  "timestamp": "2025-11-17T13:00:00.000Z",
+  "environment": "production"
+}
+```
+
+**Contact Form Test:**
+```bash
+curl -X POST https://cgs-web.vercel.app/api/contact \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Test User",
+    "email": "test@example.com",
+    "phone": "0400123456",
+    "serviceType": "Gaming Machine Sales",
+    "message": "This is a test submission to verify the contact form works correctly."
+  }'
+```
+
+**Expected Response:**
+```json
+{
+  "success": true,
+  "message": "Your inquiry has been submitted successfully. We'll be in touch soon!"
+}
+```
+
+**Check Emails:**
+- Admin email should receive notification
+- Customer (test@example.com) should receive confirmation
+
+#### 3. Form Testing via Website
+
+1. Visit your site
+2. Scroll to Contact Form section
+3. Fill in all fields:
+   - Name: Your Name
+   - Email: your-email@example.com
+   - Phone: 0400 123 456
+   - Service Type: Select any
+   - Message: Test message
+4. Click "Send Message"
+5. Should show success message
+6. Check both admin and customer emails
+
+---
+
+### Monitoring & Analytics
+
+#### Vercel Analytics (Built-in)
+
+1. Project Dashboard → Analytics tab
+2. View:
+   - Page views
+   - Unique visitors
+   - Top pages
+   - Devices & browsers
+   - Geographic data
+
+**Free Tier:** 100,000 page views/month
+
+#### Vercel Logs (Serverless Functions)
+
+1. Project Dashboard → Deployments
+2. Click latest deployment
+3. View "Functions" tab
+4. See real-time logs for API calls
+
+**Useful for:**
+- Debugging email sending issues
+- Monitoring form submissions
+- Tracking errors
+
+#### Performance Monitoring
+
+1. Dashboard → Speed Insights
+2. View Core Web Vitals:
+   - Largest Contentful Paint (LCP)
+   - First Input Delay (FID)
+   - Cumulative Layout Shift (CLS)
+
+**Target Scores:**
+- LCP: < 2.5s
+- FID: < 100ms
+- CLS: < 0.1
+
+---
+
+### Deployment Checklist for Vercel
+
+**Pre-Deployment:**
+- [ ] Code pushed to Git repository
+- [ ] Vercel account created
+- [ ] Gmail app password generated
+- [ ] All environment variables documented
+- [ ] Images added to `frontend/public/images/`
+- [ ] Business information updated in code
+
+**During Deployment:**
+- [ ] Project imported to Vercel
+- [ ] Environment variables added (8 variables)
+- [ ] Build completed successfully
+- [ ] Deployment URL received
+
+**Post-Deployment:**
+- [ ] Frontend loads correctly
+- [ ] API health check passes
+- [ ] Contact form submits successfully
+- [ ] Admin receives email notifications
+- [ ] Customers receive confirmation emails
+- [ ] All images display properly
+- [ ] Mobile view works correctly
+- [ ] No console errors
+- [ ] Custom domain configured (if applicable)
+- [ ] HTTPS enabled and working
+
+---
+
+### Troubleshooting Vercel Deployment
+
+#### Build Fails
+
+**Error:** `Command "npm run build" exited with 1`
+
+**Solution:**
+1. Check build logs in Vercel Dashboard
+2. Ensure all dependencies in `package.json`
+3. Test build locally:
+   ```bash
+   cd frontend
+   npm run build
+   ```
+4. Fix any TypeScript errors
+5. Push changes and redeploy
+
+#### API Returns 500 Error
+
+**Error:** Serverless function fails
+
+**Solution:**
+1. Check Function logs in Vercel Dashboard
+2. Verify environment variables are set
+3. Test SMTP credentials:
+   ```bash
+   vercel env ls
+   ```
+4. Check email service allows Vercel IPs
+5. Review error messages in logs
+
+#### Emails Not Sending
+
+**Possible Causes:**
+- Incorrect `SMTP_PASS` (must be app password, not account password)
+- Gmail blocking sign-in from Vercel
+- Firewall blocking SMTP port 465
+
+**Solutions:**
+1. Verify Gmail app password (16 characters, no spaces)
+2. Check "Less secure app access" is OFF (use app passwords instead)
+3. Test email manually:
+   ```bash
+   curl -X POST https://your-url.vercel.app/api/contact \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Test","email":"test@example.com","phone":"0400000000","serviceType":"Sales","message":"Test"}'
+   ```
+4. Check Vercel Function logs for email errors
+5. Consider using SendGrid for production (more reliable)
+
+#### Images Not Loading
+
+**Error:** 404 on images
+
+**Solution:**
+1. Ensure images in `frontend/public/images/` folders
+2. Check file names match exactly (case-sensitive)
+3. Verify images included in Git commit
+4. Check `.gitignore` doesn't exclude images
+5. Redeploy after adding images
+
+#### CORS Errors
+
+**Error:** `Access to fetch blocked by CORS policy`
+
+**Solution:**
+1. Update `FRONTEND_URL` environment variable to match actual domain
+2. If using custom domain, update variable:
+   ```bash
+   vercel env add FRONTEND_URL production
+   # Enter: https://coopergamingservices.com
+   ```
+3. Redeploy for changes to take effect
+
+---
+
+### Cost Breakdown
+
+**Vercel Free Tier (Hobby):**
+- ✅ 100GB bandwidth/month
+- ✅ Unlimited deployments
+- ✅ Automatic HTTPS
+- ✅ Global CDN
+- ✅ Serverless functions (100GB-hours)
+- ✅ 1 concurrent build
+- ✅ Analytics (100K events)
+
+**Expected Usage for CGS Website:**
+- Bandwidth: ~5-20GB/month (well under limit)
+- Builds: ~50-100/month (well under limit)
+- Function invocations: ~1,000-5,000/month (well under limit)
+
+**Verdict:** Free tier is perfect for this website.
+
+**If You Need More:**
+- **Pro Plan:** $20/month
+  - 1TB bandwidth
+  - Advanced analytics
+  - Priority support
+  - Password protection
+  - More concurrent builds
+
+---
+
+### Vercel vs Other Options
+
+| Feature | Vercel | Netlify | Railway | Traditional Hosting |
+|---------|--------|---------|---------|---------------------|
+| **Setup Time** | 5 minutes | 10 minutes | 15 minutes | 1-2 hours |
+| **HTTPS** | Automatic | Automatic | Manual setup | Manual setup |
+| **Deployments** | Git push | Git push | Git push | Manual upload |
+| **Scaling** | Automatic | Automatic | Manual | Manual |
+| **CDN** | Global | Global | Limited | Optional |
+| **Cost (Free Tier)** | 100GB | 100GB | 500 hours | $5-20/month |
+| **Backend Support** | Serverless | Functions | Container | Full Node.js |
+| **Best For** | Full-stack apps | Static sites | Databases | Full control |
+
+**Recommendation:** Vercel is the best choice for this React + Node.js project.
+
+---
+
+### Advanced Vercel Features
+
+#### 1. Preview Deployments
+
+Every Git branch gets its own URL:
+```
+main branch → https://cgs-web.vercel.app (Production)
+dev branch → https://cgs-web-git-dev-yourname.vercel.app (Preview)
+PR #5 → https://cgs-web-git-pr5-yourname.vercel.app (Preview)
+```
+
+**Use Cases:**
+- Test features before merging
+- Share work-in-progress with clients
+- QA testing in production-like environment
+
+#### 2. Deployment Protection
+
+**Password Protection:**
+1. Project → Settings → Deployment Protection
+2. Enable "Vercel Authentication"
+3. Only team members can view previews
+
+**Useful for:** Client presentations, staging environments
+
+#### 3. Edge Functions
+
+For ultra-low latency API responses (coming soon to this project):
+```javascript
+// backend/api/edge/contact.js
+export const config = {
+  runtime: 'edge', // Runs on Vercel Edge Network
+}
+
+export default async function handler(request) {
+  // Lightning-fast response from nearest edge location
+}
+```
+
+#### 4. Cron Jobs (Scheduled Functions)
+
+Run tasks on schedule:
+```json
+// vercel.json
+{
+  "crons": [{
+    "path": "/api/daily-report",
+    "schedule": "0 9 * * *"
+  }]
+}
+```
+
+**Use Cases:**
+- Daily email digest of submissions
+- Weekly analytics reports
+- Automated backups
+
+---
+
+### Maintenance on Vercel
+
+#### Updating the Site
+
+**Code Changes:**
+```bash
+# Make changes locally
+git add .
+git commit -m "Update services section"
+git push origin main
+# Vercel automatically deploys!
+```
+
+**Environment Variables:**
+```bash
+vercel env add NEW_VARIABLE production
+vercel --prod  # Redeploy with new variable
+```
+
+#### Monitoring
+
+**Set Up Notifications:**
+1. Project → Settings → Notifications
+2. Add Slack/Discord/Email for:
+   - Deployment failures
+   - Build errors
+   - Function errors
+
+**Check Logs:**
+```bash
+vercel logs [deployment-url]
+```
+
+#### Rollback
+
+If deployment breaks:
+1. Dashboard → Deployments
+2. Find last working deployment
+3. Click "..." → "Promote to Production"
+4. Instant rollback (< 1 minute)
+
+---
+
+## 🎯 Recommended Deployment Path
+
+**For Cooper Gaming Services, follow this order:**
+
+### Phase 1: Initial Launch (Day 1)
+1. ✅ Deploy to Vercel (free tier)
+2. ✅ Use Vercel-provided URL: `cgs-web.vercel.app`
+3. ✅ Test all functionality
+4. ✅ Verify emails working
+
+### Phase 2: Domain Setup (Day 2-3)
+1. ✅ Purchase domain: `coopergamingservices.com` (if not owned)
+2. ✅ Add domain in Vercel
+3. ✅ Configure DNS (24-48 hours propagation)
+4. ✅ Update environment variables with custom domain
+5. ✅ Update `index.html` meta tags with custom domain
+6. ✅ Update `sitemap.xml` with custom domain
+
+### Phase 3: SEO & Marketing (Week 1)
+1. ✅ Submit sitemap to Google Search Console
+2. ✅ Claim Google Business Profile
+3. ✅ Set up Google Analytics
+4. ✅ Configure email signatures
+5. ✅ Social media setup
+
+### Phase 4: Optimization (Month 1)
+1. ✅ Monitor Vercel Analytics
+2. ✅ Review function logs
+3. ✅ Optimize images further if needed
+4. ✅ A/B test contact form
+5. ✅ Get customer reviews
+
+---
 
 **Cost:** Free tier (100GB bandwidth, then ~$20/month for Pro)
 
