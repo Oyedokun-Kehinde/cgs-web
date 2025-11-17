@@ -7,24 +7,24 @@ interface Location {
 const Locations = () => {
   const locations: Location[] = [
     {
-      region: 'Brisbane Metro',
-      areas: ['Brisbane CBD', 'North Brisbane', 'South Brisbane', 'Western Suburbs', 'Eastern Suburbs'],
+      region: 'Bundaberg',
+      areas: ['Bundaberg Central', 'Bundaberg North', 'Bundaberg South', 'Bundaberg East', 'Bundaberg West'],
       icon: 'bi-building'
     },
     {
-      region: 'Gold Coast',
-      areas: ['Southport', 'Surfers Paradise', 'Broadbeach', 'Robina', 'Burleigh Heads'],
-      icon: 'bi-sun'
+      region: 'Gympie',
+      areas: ['Gympie Central', 'Gympie South', 'Gympie North', 'Cooloola', 'Surrounding Areas'],
+      icon: 'bi-geo-alt'
     },
     {
-      region: 'Sunshine Coast',
-      areas: ['Maroochydore', 'Caloundra', 'Noosa', 'Nambour', 'Kawana'],
+      region: 'Hervey Bay',
+      areas: ['Urangan', 'Pialba', 'Torquay', 'Scarness', 'Point Vernon'],
       icon: 'bi-water'
     },
     {
-      region: 'Regional Queensland',
-      areas: ['Toowoomba', 'Ipswich', 'Logan', 'Redlands', 'Moreton Bay'],
-      icon: 'bi-geo-alt'
+      region: 'Maryborough',
+      areas: ['Maryborough Central', 'Maryborough West', 'Tinana', 'Granville', 'Surrounding Areas'],
+      icon: 'bi-sun'
     }
   ]
 

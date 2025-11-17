@@ -24,7 +24,7 @@ const HeroSlider = () => {
       description: 'Queensland\'s trusted partner for gaming machine services. We deliver reliable solutions tailored to your venue\'s needs.',
       cta: 'Explore Services',
       ctaLink: 'services',
-      image: '/images/hero/hero-1.png'
+      image: '/images/hero/new-hero.avif'
     },
     {
       id: 2,
