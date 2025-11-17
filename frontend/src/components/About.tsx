@@ -80,7 +80,7 @@ const About = () => {
         {/* Mission & Values */}
         <div className="row mt-5">
           <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div className="value-card">
+            <div className="value-card mt-5">
               <div className="value-icon">
                 <i className="bi bi-bullseye"></i>
               </div>
@@ -93,7 +93,7 @@ const About = () => {
           </div>
           
           <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div className="value-card">
+            <div className="value-card mt-5">
               <div className="value-icon">
                 <i className="bi bi-eye"></i>
               </div>
@@ -106,7 +106,7 @@ const About = () => {
           </div>
           
           <div className="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div className="value-card">
+            <div className="value-card mt-5">
               <div className="value-icon">
                 <i className="bi bi-heart"></i>
               </div>
