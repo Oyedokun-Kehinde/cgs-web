@@ -47,32 +47,35 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Services */}
-            <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
-              <h5 className="footer-title">Our Services</h5>
-              <ul className="footer-links">
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <ScrollLink to="services" smooth={true} duration={500}>
-                      {service}
-                    </ScrollLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Services and Quick Links Wrapper */}
+            <div className="col-lg-4 col-md-12 mb-4 mb-lg-0 footer-services-links">
+              {/* Services */}
+              <div>
+                <h5 className="footer-title">Our Services</h5>
+                <ul className="footer-links">
+                  {services.map((service, index) => (
+                    <li key={index}>
+                      <ScrollLink to="services" smooth={true} duration={500}>
+                        {service}
+                      </ScrollLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            {/* Quick Links */}
-            <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
-              <h5 className="footer-title">Quick Links</h5>
-              <ul className="footer-links">
-                {quickLinks.map((link, index) => (
-                  <li key={index}>
-                    <ScrollLink to={link.to} smooth={true} duration={500}>
-                      {link.label}
-                    </ScrollLink>
-                  </li>
-                ))}
-              </ul>
+              {/* Quick Links */}
+              <div>
+                <h5 className="footer-title">Quick Links</h5>
+                <ul className="footer-links">
+                  {quickLinks.map((link, index) => (
+                    <li key={index}>
+                      <ScrollLink to={link.to} smooth={true} duration={500}>
+                        {link.label}
+                      </ScrollLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             {/* Contact Info */}

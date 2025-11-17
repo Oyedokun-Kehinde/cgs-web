@@ -596,7 +596,11 @@ a {
     height: 100%;
     
     @media (max-width: 991px) {
-      margin-top: 3rem;
+      margin-bottom: 2rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     
     &:hover {
@@ -1168,13 +1172,30 @@ a {
       padding: 3rem 0;
       
       .row {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        
         > div {
-          margin-bottom: 2rem;
+          margin-bottom: 3rem;
           
           &:last-child {
             margin-bottom: 0;
           }
         }
+      }
+    }
+  }
+  
+  .footer-services-links {
+    @media (max-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 0 !important;
+      
+      > div {
+        margin-bottom: 0 !important;
       }
     }
   }
@@ -1298,20 +1319,55 @@ a {
     background: rgba(0,0,0,0.2);
     padding: 1.5rem 0;
     
-    .footer-bottom-links {
-      a {
-        color: $medium-grey;
-        text-decoration: none;
+    @media (max-width: 768px) {
+      padding: 2rem 0;
+      
+      .row {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center !important;
         
-        &:hover {
-          color: $white;
+        > div {
+          text-align: center !important;
         }
       }
+    }
+    
+    p {
+      color: $white;
+      opacity: 0.9;
+    }
+    
+    a {
+      color: $white;
+      text-decoration: none;
+      transition: color 0.3s;
       
-      .separator {
-        margin: 0 0.5rem;
-        color: $medium-grey;
+      &:hover {
+        color: $primary-red;
       }
+    }
+    
+    .footer-bottom-links {
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        
+        .separator {
+          display: none;
+        }
+        
+        a {
+          display: block;
+        }
+      }
+    }
+    
+    .separator {
+      margin: 0 0.75rem;
+      opacity: 0.5;
     }
   }
 }
