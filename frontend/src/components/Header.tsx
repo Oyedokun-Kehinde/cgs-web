@@ -73,7 +73,7 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <img 
-                src="/images/logo/cgs-cooper-logo-v2.png" 
+                src="/images/logo/cgs-cooper-logo-v1.png" 
                 alt="Cooper Gaming Services" 
                 className="brand-logo"
                 style={{ width: '225.78px', height: '64.18px' }}

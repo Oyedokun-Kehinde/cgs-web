@@ -26,7 +26,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <img 
-                src="/images/logo/cgs-cooper-logo-v2.png" 
+                src="/images/logo/cgs-cooper-logo-v1.png" 
                 alt="Cooper Gaming Services" 
                 className="footer-logo mb-3"
                 style={{ width: '180px', height: 'auto' }}
