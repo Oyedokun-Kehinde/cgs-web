@@ -72,8 +72,12 @@ const Header = () => {
               className="navbar-brand"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="brand-text">Cooper Gaming Services</span>
-              <span className="brand-tagline">Excellence in Gaming Solutions</span>
+              <img 
+                src="/images/logo/cgs-cooper-logo-v2.png" 
+                alt="Cooper Gaming Services" 
+                className="brand-logo"
+                style={{ width: '225.78px', height: '64.18px' }}
+              />
             </ScrollLink>
 
             <button

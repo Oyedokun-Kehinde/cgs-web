@@ -272,21 +272,17 @@ a {
   
   .navbar-brand {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     text-decoration: none;
-    cursor: pointer;
     
-    .brand-text {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: $dark-grey;
-    }
-    
-    .brand-tagline {
-      font-size: 0.75rem;
-      color: $primary-red;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .brand-logo {
+      max-width: 100%;
+      height: auto;
+      
+      @media (max-width: 768px) {
+        width: 180px !important;
+        height: auto !important;
+      }
     }
   }
   
@@ -1165,6 +1161,15 @@ a {
   color: $white;
   overflow-x: hidden;
   
+  .footer-logo {
+    max-width: 200px;
+    height: auto;
+    
+    @media (max-width: 768px) {
+      max-width: 160px;
+    }
+  }
+  
   .footer-top {
     padding: 4rem 0;
     
@@ -1182,37 +1187,31 @@ a {
           &:last-child {
             margin-bottom: 0;
           }
+          
+          // Quick Links and Services side-by-side on mobile
+          &:nth-child(2),
+          &:nth-child(3) {
+            width: 50%;
+            float: left;
+            margin-bottom: 3rem;
+          }
+          
+          &:nth-child(2) {
+            padding-right: 1rem;
+          }
+          
+          &:nth-child(3) {
+            padding-left: 1rem;
+          }
+          
+          &:nth-child(4) {
+            clear: both;
+          }
         }
       }
     }
   }
   
-  .footer-services-links {
-    @media (max-width: 768px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 0 !important;
-      
-      > div {
-        margin-bottom: 0 !important;
-      }
-    }
-  }
-  
-  .footer-brand {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-  }
-  
-  .footer-tagline {
-    color: $primary-red;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-  }
   
   .footer-description {
     color: $medium-grey;
@@ -1325,7 +1324,7 @@ a {
       .row {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
         text-align: center !important;
         
         > div {
@@ -1337,37 +1336,18 @@ a {
     p {
       color: $white;
       opacity: 0.9;
+      font-size: 0.95rem;
     }
     
     a {
-      color: $white;
+      color: $primary-red;
       text-decoration: none;
       transition: color 0.3s;
+      font-weight: 600;
       
       &:hover {
-        color: $primary-red;
+        text-decoration: underline;
       }
-    }
-    
-    .footer-bottom-links {
-      @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        
-        .separator {
-          display: none;
-        }
-        
-        a {
-          display: block;
-        }
-      }
-    }
-    
-    .separator {
-      margin: 0 0.75rem;
-      opacity: 0.5;
     }
   }
 }

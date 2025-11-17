@@ -24,9 +24,13 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             {/* Company Info */}
-            <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
-              <h3 className="footer-brand">Cooper Gaming Services</h3>
-              <p className="footer-tagline">Excellence in Gaming Solutions</p>
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <img 
+                src="/images/logo/cgs-cooper-logo-v2.png" 
+                alt="Cooper Gaming Services" 
+                className="footer-logo mb-3"
+                style={{ width: '180px', height: 'auto' }}
+              />
               <p className="footer-description">
                 Queensland's premier gaming machine specialists, providing comprehensive 
                 sales, service, and maintenance solutions for over 15 years.
@@ -47,35 +51,32 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Services and Quick Links Wrapper */}
-            <div className="col-lg-4 col-md-12 mb-4 mb-lg-0 footer-services-links">
-              {/* Services */}
-              <div>
-                <h5 className="footer-title">Our Services</h5>
-                <ul className="footer-links">
-                  {services.map((service, index) => (
-                    <li key={index}>
-                      <ScrollLink to="services" smooth={true} duration={500}>
-                        {service}
-                      </ScrollLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Quick Links */}
+            <div className="col-lg-2 col-md-6 mb-4 mb-lg-0">
+              <h5 className="footer-title">Quick Links</h5>
+              <ul className="footer-links">
+                {quickLinks.map((link, index) => (
+                  <li key={index}>
+                    <ScrollLink to={link.to} smooth={true} duration={500}>
+                      {link.label}
+                    </ScrollLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              {/* Quick Links */}
-              <div>
-                <h5 className="footer-title">Quick Links</h5>
-                <ul className="footer-links">
-                  {quickLinks.map((link, index) => (
-                    <li key={index}>
-                      <ScrollLink to={link.to} smooth={true} duration={500}>
-                        {link.label}
-                      </ScrollLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Services */}
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <h5 className="footer-title">Our Services</h5>
+              <ul className="footer-links">
+                {services.map((service, index) => (
+                  <li key={index}>
+                    <ScrollLink to="services" smooth={true} duration={500}>
+                      {service}
+                    </ScrollLink>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Contact Info */}
@@ -117,18 +118,11 @@ const Footer = () => {
               <p className="mb-0">
                 &copy; {currentYear} Cooper Gaming Services. All rights reserved.
               </p>
-              <p className="mb-0 mt-1 small">
-                Site by <a href="https://athenanetworks.com.au/" target="_blank" rel="noopener noreferrer" className="text-danger">Athena Networks</a>
-              </p>
             </div>
             <div className="col-md-6 text-center text-md-end">
-              <div className="footer-bottom-links">
-                <a href="#privacy">Privacy Policy</a>
-                <span className="separator">|</span>
-                <a href="#terms">Terms of Service</a>
-                <span className="separator">|</span>
-                <a href="#sitemap">Sitemap</a>
-              </div>
+              <p className="mb-0">
+                Website Crafted by <a href="https://athenanetworks.com.au/" target="_blank" rel="noopener noreferrer" className="text-danger">Athena Networks</a>
+              </p>
             </div>
           </div>
         </div>

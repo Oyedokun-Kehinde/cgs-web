@@ -124,3 +124,7 @@ const About = () => {
 }
 
 export default About
+
+//Let us now use PNG images for the logo. The width and height of thelogs are: 22.578 and 6.418.The header is: C:\Users\oyedo\Desktop\Athena\projects\cgs-web\frontend\public\images\logo\cgs-cooper-logo-v2.png
+
+//The footer is: C:\Users\oyedo\Desktop\Athena\projects\cgs-web\frontend\public\images\logo\cgs-cooper-logo-v2.png
