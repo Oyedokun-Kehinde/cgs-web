@@ -7,7 +7,7 @@ $light-grey: #ecf0f1;
 $white: #ffffff;
 
 // Typography
-$font-family: 'Manrope', sans-serif;
+$font-family: 'Google Sans Flex', sans-serif;
 
 // Bootstrap Override - Must come before Bootstrap import
 $primary: $primary-red;
@@ -37,11 +37,18 @@ $btn-padding-x: 2rem;
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: $font-family;
   line-height: 1.6;
   color: $body-color;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 // Force Bootstrap button colors
@@ -152,21 +159,28 @@ a {
   color: $white;
   padding: 0.75rem 0;
   font-size: 0.875rem;
+  width: 100%;
   
   @media (max-width: 991px) {
     display: none;
+  }
+  
+  .container {
+    max-width: 100%;
   }
   
   .top-bar-info {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
+    overflow: hidden;
     
     .info-item {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       white-space: nowrap;
+      flex-shrink: 0;
       
       a {
         color: $white;
@@ -204,9 +218,21 @@ a {
   top: 0;
   z-index: 1000;
   transition: all 0.3s;
+  width: 100%;
+  left: 0;
   
   &.scrolled {
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  
+  .navbar {
+    padding: 0.75rem 0;
+  }
+  
+  .container {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
   .navbar-brand {
@@ -287,9 +313,17 @@ a {
   position: relative;
   height: 100vh;
   min-height: 600px;
+  width: 100%;
+  overflow: hidden;
+  
+  @media (max-width: 768px) {
+    height: 70vh;
+    min-height: 500px;
+  }
   
   .hero-swiper {
     height: 100%;
+    width: 100%;
   }
   
   // Swiper Navigation Buttons - Override Blue
@@ -315,12 +349,14 @@ a {
   
   .hero-slide {
     height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden;
   }
   
   .hero-overlay {
@@ -338,12 +374,20 @@ a {
     color: $white;
     max-width: 700px;
     
+    @media (max-width: 768px) {
+      padding: 0 1.5rem;
+    }
+    
     .hero-subtitle {
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 1rem;
       display: block;
+      
+      @media (max-width: 768px) {
+        font-size: 0.875rem;
+      }
     }
     
     .hero-title {
@@ -353,7 +397,8 @@ a {
       line-height: 1.2;
       
       @media (max-width: 768px) {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
       }
     }
     
@@ -361,12 +406,26 @@ a {
       font-size: 1.2rem;
       margin-bottom: 2rem;
       line-height: 1.8;
+      
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
     }
     
     .hero-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
+      
+      @media (max-width: 768px) {
+        gap: 0.75rem;
+        
+        .btn {
+          font-size: 0.875rem;
+          padding: 0.6rem 1.25rem;
+        }
+      }
     }
   }
 }
@@ -374,6 +433,15 @@ a {
 // About Section
 .about-section {
   padding: 5rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
   
   .about-image-wrapper {
     position: relative;
@@ -503,6 +571,15 @@ a {
   background: $light-grey;
   padding: 5rem 0;
   
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
   .service-card {
     background: $white;
     border-radius: 10px;
@@ -605,6 +682,15 @@ a {
   background: linear-gradient(135deg, $dark-grey, #34495e);
   padding: 5rem 0;
   
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
   .usp-card {
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
@@ -660,6 +746,15 @@ a {
 .commitment-section {
   padding: 5rem 0;
   
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
   .commitment-card {
     background: $light-grey;
     padding: 2rem;
@@ -706,6 +801,15 @@ a {
   background: $primary-red;
   padding: 4rem 0;
   
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
   .stat-box {
     text-align: center;
     color: $white;
@@ -732,6 +836,16 @@ a {
 
 // Locations Section
 .locations-section {
+  padding: 5rem 0;
+  
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
   .location-card {
     background: $white;
     border: 2px solid $light-grey;
@@ -838,18 +952,32 @@ a {
   color: $white;
   padding: 4rem 0;
   
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
   h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     
     @media (max-width: 768px) {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
   
   p {
     font-size: 1.1rem;
     margin: 0;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -857,6 +985,15 @@ a {
 .contact-section {
   padding: 5rem 0;
   background: $light-grey;
+  
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
   
   .contact-info-list {
     .contact-info-item {
@@ -1079,14 +1216,29 @@ a {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.3s;
   z-index: 999;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border: none;
+  text-decoration: none;
+  
+  @media (max-width: 768px) {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.25rem;
+  }
   
   &:hover {
     background: darken($primary-red, 10%);
     transform: translateY(-5px);
+    color: $white;
+  }
+  
+  &:active {
+    transform: translateY(-3px);
   }
 }
 
@@ -1241,11 +1393,34 @@ a {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
       
       i {
         color: $primary-red;
+        flex-shrink: 0;
       }
     }
+  }
+}
+
+// Prevent Overflow from all Sections
+.container {
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  
+  > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
