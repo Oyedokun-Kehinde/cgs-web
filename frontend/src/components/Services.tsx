@@ -120,7 +120,7 @@ const Services = () => {
                   </ul>
                   
                   <a href="#contact" className="btn btn-danger mt-3">
-                    Learn More
+                    Get Started
                   </a>
                 </div>
               </motion.div>

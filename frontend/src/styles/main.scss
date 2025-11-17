@@ -61,6 +61,25 @@ body {
   max-width: 100%;
 }
 
+// Hide scrollbars globally
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(220, 53, 69, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 53, 69, 0.5);
+}
+
 #root {
   overflow-x: hidden !important;
   width: 100%;
@@ -449,6 +468,7 @@ a {
 // About Section
 .about-section {
   padding: 5rem 0;
+  overflow-x: hidden;
   
   @media (max-width: 768px) {
     padding: 3rem 0;
@@ -456,6 +476,12 @@ a {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+    }
+  }
+  
+  .about-content {
+    @media (max-width: 991px) {
+      margin-top: 2rem;
     }
   }
   
@@ -526,17 +552,36 @@ a {
     gap: 2rem;
     flex-wrap: wrap;
     
+    @media (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    
     .stat-item {
+      @media (max-width: 768px) {
+        min-width: 0;
+      }
+      
       h3 {
         font-size: 2.5rem;
         font-weight: 700;
         color: $primary-red;
         margin-bottom: 0.25rem;
+        
+        @media (max-width: 768px) {
+          font-size: 1.75rem;
+        }
       }
       
       p {
         color: $medium-grey;
         margin: 0;
+        
+        @media (max-width: 768px) {
+          font-size: 0.875rem;
+        }
       }
     }
   }
@@ -549,6 +594,10 @@ a {
     border: 2px solid transparent;
     transition: all 0.4s ease;
     height: 100%;
+    
+    @media (max-width: 991px) {
+      margin-top: 3rem;
+    }
     
     &:hover {
       transform: translateY(-10px);
@@ -586,6 +635,7 @@ a {
 .services-section {
   background: $light-grey;
   padding: 5rem 0;
+  overflow-x: hidden;
   
   @media (max-width: 768px) {
     padding: 3rem 0;
@@ -593,6 +643,12 @@ a {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+    }
+  }
+  
+  .row {
+    @media (max-width: 991px) {
+      row-gap: 2rem !important;
     }
   }
   
@@ -605,6 +661,11 @@ a {
     transition: all 0.3s;
     border-top: 4px solid $primary-red;
     position: relative;
+    margin-bottom: 1rem;
+    
+    @media (max-width: 991px) {
+      margin-bottom: 2rem;
+    }
     
     &.service-card-danger { border-top-color: $primary-red; }
     
@@ -697,6 +758,7 @@ a {
 .usps-section {
   background: linear-gradient(135deg, $dark-grey, #34495e);
   padding: 5rem 0;
+  overflow-x: hidden;
   
   @media (max-width: 768px) {
     padding: 3rem 0;
@@ -704,6 +766,12 @@ a {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+    }
+  }
+  
+  .row {
+    @media (max-width: 768px) {
+      row-gap: 1.5rem !important;
     }
   }
   
@@ -761,6 +829,7 @@ a {
 // Commitment Section
 .commitment-section {
   padding: 5rem 0;
+  overflow-x: hidden;
   
   @media (max-width: 768px) {
     padding: 3rem 0;
@@ -768,6 +837,12 @@ a {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
+    }
+  }
+  
+  .row {
+    @media (max-width: 768px) {
+      row-gap: 1rem !important;
     }
   }
   
@@ -816,6 +891,7 @@ a {
 .results-section {
   background: $primary-red;
   padding: 4rem 0;
+  overflow-x: hidden;
   
   @media (max-width: 768px) {
     padding: 3rem 0;
@@ -853,6 +929,7 @@ a {
 // Locations Section
 .locations-section {
   padding: 5rem 0;
+  overflow-x: hidden;
   
   @media (max-width: 768px) {
     padding: 3rem 0;
@@ -1001,6 +1078,7 @@ a {
 .contact-section {
   padding: 5rem 0;
   background: $light-grey;
+  overflow-x: hidden;
   
   @media (max-width: 768px) {
     padding: 3rem 0;
@@ -1054,6 +1132,10 @@ a {
     border-radius: 10px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
+    
     .form-label {
       font-weight: 600;
       color: $dark-grey;
@@ -1077,9 +1159,24 @@ a {
 .footer {
   background: $dark-grey;
   color: $white;
+  overflow-x: hidden;
   
   .footer-top {
     padding: 4rem 0;
+    
+    @media (max-width: 768px) {
+      padding: 3rem 0;
+      
+      .row {
+        > div {
+          margin-bottom: 2rem;
+          
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
   }
   
   .footer-brand {
