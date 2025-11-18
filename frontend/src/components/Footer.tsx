@@ -26,26 +26,26 @@ const Footer = () => {
             {/* Company Info */}
             <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <img 
-                src="/images/logo/cgs-logo-v2.png" 
+                src="/images/logo/new-footer-logo.png" 
                 alt="Cooper Gaming Services" 
                 className="footer-logo mb-3"
-                style={{ width: '180px', height: 'auto' }}
+                style={{ width: '22.51cm', height: '6.62cm' }}
               />
               <p className="footer-description">
                 Queensland's premier gaming machine specialists, providing comprehensive 
                 sales, service, and maintenance solutions for over 15 years.
               </p>
               <div className="footer-social">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://facebook.com/CooperGamingServices" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <i className="bi bi-facebook"></i>
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://linkedin.com/CooperGamingServices" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <i className="bi bi-linkedin"></i>
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <a href="https://twitter.com/CooperGamingServices" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <i className="bi bi-twitter"></i>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://instagram.com/CooperGamingServices" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <i className="bi bi-instagram"></i>
                 </a>
               </div>
