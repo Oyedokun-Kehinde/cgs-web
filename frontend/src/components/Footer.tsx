@@ -29,7 +29,7 @@ const Footer = () => {
                 src="/images/logo/new-footer-logo.png" 
                 alt="Cooper Gaming Services" 
                 className="footer-logo mb-3"
-                style={{ width: '22.51cm', height: '6.62cm' }}
+                style={{ width: '180px', height: 'auto' }}
               />
               <p className="footer-description">
                 Queensland's premier gaming machine specialists, providing comprehensive 
