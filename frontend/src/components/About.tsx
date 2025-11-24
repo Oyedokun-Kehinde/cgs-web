@@ -20,11 +20,11 @@ const About = () => {
           <div className="col-lg-6" data-aos="fade-left" data-aos-delay="200">
             <div className="about-content">
               <span className="section-tag">About Us</span>
-              <h2 className="section-title">Queensland's Premier Gaming Machine Specialists</h2>
+              <h2 className="section-title">Queensland's Premier Gaming & Technology Specialists</h2>
               <p className="section-description">
-                Cooper Gaming Services has been at the forefront of gaming machine excellence for over 15 years. 
-                We pride ourselves on delivering comprehensive solutions that combine technical expertise, 
-                regulatory compliance, and outstanding customer service.
+                Cooper Gaming Services has been at the forefront of gaming and technology excellence for over 15 years. 
+                We pride ourselves on delivering comprehensive solutions from gaming room design to retail IT support, 
+                combining technical expertise, regulatory compliance, and outstanding customer service.
               </p>
               
               <div className="about-features">
@@ -86,7 +86,7 @@ const About = () => {
               </div>
               <h3>Our Mission</h3>
               <p>
-                To provide reliable, compliant, and innovative gaming machine solutions that 
+                To provide reliable, compliant, and innovative gaming and technology solutions that 
                 maximize venue performance and customer satisfaction.
               </p>
             </div>

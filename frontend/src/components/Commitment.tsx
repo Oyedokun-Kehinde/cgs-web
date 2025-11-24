@@ -24,7 +24,7 @@ const Commitment = () => {
     {
       icon: 'bi-globe',
       title: 'Environmental Care',
-      description: 'Responsible disposal and recycling of gaming machine components'
+      description: 'Responsible disposal and recycling of gaming and technology components'
     },
     {
       icon: 'bi-shield-check',

@@ -4,9 +4,9 @@ const CTA = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-8" data-aos="fade-right">
-            <h2>Ready to Elevate Your Gaming Operations?</h2>
+            <h2>Ready to Elevate Your Gaming & Technology Operations?</h2>
             <p>
-              Partner with Queensland's leading gaming machine specialists. 
+              Partner with Queensland's leading gaming and technology specialists. 
               Get a free consultation and discover how we can optimize your venue's performance.
             </p>
           </div>

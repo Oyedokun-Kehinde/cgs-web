@@ -13,16 +13,16 @@ const Services = () => {
   const services: Service[] = [
     {
       id: 1,
-      icon: 'bi-cart-check',
-      title: 'Gaming Machine Sales',
-      description: 'Browse our extensive range of new and certified refurbished gaming machines. We offer premium EGMs from leading manufacturers, tailored to suit your venue\'s requirements and budget.',
+      icon: 'bi-dice-5',
+      title: 'Gaming Room Design & Consoles',
+      description: 'Professional gaming room design and console base installations. We partner with leading manufacturers to deliver complete gaming floor solutions, including custom bases and full room layouts.',
       features: [
-        'New & refurbished equipment',
-        'Premium brand selection',
-        'Competitive pricing',
-        'Full warranty coverage'
+        'Custom room design',
+        'Console base supply & installation',
+        'Partnership with premium manufacturers',
+        'Complete floor solutions'
       ],
-      image: '/images/services/service-sales.png'
+      image: '/images/services/service-consultation.png'
     },
     {
       id: 2,
@@ -52,16 +52,42 @@ const Services = () => {
     },
     {
       id: 4,
-      icon: 'bi-lightbulb',
-      title: 'Consultation & Installation',
-      description: 'From initial venue assessment to full installation and staff training, we provide end-to-end solutions. Our consultants work with you to design the perfect gaming floor layout.',
+      icon: 'bi-shop',
+      title: 'Retail IT Support',
+      description: 'Comprehensive retail technology solutions including POS systems, EFTPOS terminals, and hardware support. We supply, install, repair, and maintain systems from leading brands.',
       features: [
-        'Venue assessment',
-        'Floor planning',
-        'Complete installation',
-        'Staff training'
+        'POS repairs, supply & installation',
+        'EFTPOS (Verifone, Ingenico, Paynuts)',
+        'Hardware support (Toshiba, IBM, Fujitsu)',
+        'Ongoing maintenance'
       ],
       image: '/images/services/service-consultation.png'
+    },
+    {
+      id: 5,
+      icon: 'bi-cash-coin',
+      title: 'Pay Systems Repairs & Maintenance',
+      description: 'Specialist service for ATMs, note counters, and note recyclers. We ensure your payment systems operate reliably with expert repairs, maintenance, and compliance support.',
+      features: [
+        'ATM service & repairs',
+        'Note counter maintenance',
+        'Note recycler support',
+        'Compliance & reliability'
+      ],
+      image: '/images/services/service-maintenance.png'
+    },
+    {
+      id: 6,
+      icon: 'bi-tv',
+      title: 'Digital Signage',
+      description: 'Professional LED signage installation and service. We deliver eye-catching digital displays for your venue, with full installation support and ongoing maintenance.',
+      features: [
+        'LED display installation',
+        'Professional setup',
+        'Content management support',
+        'Service & maintenance'
+      ],
+      image: '/images/services/service-sales.png'
     }
   ]
 
@@ -80,9 +106,9 @@ const Services = () => {
       <div className="container">
         <div className="text-center mb-5" data-aos="fade-up">
           <span className="section-tag">Our Services</span>
-          <h2 className="section-title">Comprehensive Gaming Solutions</h2>
+          <h2 className="section-title">Comprehensive Gaming & Technology Solutions</h2>
           <p className="section-description mx-auto" style={{ maxWidth: '700px' }}>
-            From sales to ongoing support, we deliver complete gaming machine services 
+            From gaming room design to retail IT support, we deliver complete technology services 
             that keep your venue running smoothly and profitably.
           </p>
         </div>

@@ -36,7 +36,7 @@ const Locations = () => {
           <h2 className="section-title">We Service All of Queensland</h2>
           <p className="section-description mx-auto" style={{ maxWidth: '700px' }}>
             Our mobile technicians cover major metropolitan areas and regional Queensland, 
-            providing fast, reliable gaming machine services wherever you need us.
+            providing fast, reliable gaming and technology services wherever you need us.
           </p>
         </div>
 

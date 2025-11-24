@@ -38,10 +38,12 @@ const ContactForm = () => {
   const [modal, setModal] = useState<ModalState>({ show: false, type: 'info', message: '' })
 
   const serviceTypes = [
-    'Gaming Machine Sales',
+    'Gaming Room Design & Consoles',
     'Technical Service & Repairs',
     'Preventative Maintenance',
-    'Consultation & Installation',
+    'Retail IT Support',
+    'Pay Systems Repairs & Maintenance',
+    'Digital Signage',
     'General Inquiry'
   ]
 

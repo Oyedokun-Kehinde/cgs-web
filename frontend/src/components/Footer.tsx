@@ -4,10 +4,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const services = [
-    'Gaming Machine Sales',
+    'Gaming Room Design & Consoles',
     'Technical Service & Repairs',
     'Preventative Maintenance',
-    'Consultation & Installation'
+    'Retail IT Support',
+    'Pay Systems Maintenance',
+    'Digital Signage'
   ]
 
   const quickLinks = [
@@ -29,11 +31,11 @@ const Footer = () => {
                 src="/images/logo/new-footer-logo.png" 
                 alt="Cooper Gaming Services" 
                 className="footer-logo mb-3"
-                style={{ width: '180px', height: 'auto' }}
+                style={{ width: '337.5px', height: 'auto' }}
               />
               <p className="footer-description">
-                Queensland's premier gaming machine specialists, providing comprehensive 
-                sales, service, and maintenance solutions for over 15 years.
+                Queensland's premier gaming and technology specialists, providing comprehensive 
+                gaming design, IT support, and maintenance solutions for over 15 years.
               </p>
               <div className="footer-social">
                 <a href="https://facebook.com/CooperGamingServices" target="_blank" rel="noopener noreferrer" aria-label="Facebook">

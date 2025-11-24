@@ -19,9 +19,9 @@ const HeroSlider = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      title: 'Professional Gaming Machine Solutions',
-      subtitle: 'Sales, Service & Maintenance Excellence',
-      description: 'Queensland\'s trusted partner for gaming machine services. We deliver reliable solutions tailored to your venue\'s needs.',
+      title: 'Professional Gaming & Technology Solutions',
+      subtitle: 'Gaming Design, IT Support & Maintenance Excellence',
+      description: 'Queensland\'s trusted partner for gaming room design, retail IT support, and complete technology services tailored to your venue\'s needs.',
       cta: 'Explore Services',
       ctaLink: 'services',
       image: '/images/hero/new-hero.avif'
@@ -30,7 +30,7 @@ const HeroSlider = () => {
       id: 2,
       title: 'Expert Technical Support',
       subtitle: '24/7 Service & Rapid Response',
-      description: 'Minimize downtime with our dedicated technical team. Fast, efficient repairs and preventative maintenance to keep your machines running.',
+      description: 'Minimize downtime with our dedicated technical team. Fast, efficient repairs across gaming systems, POS, EFTPOS, and payment systems.',
       cta: 'Contact Us',
       ctaLink: 'contact',
       image: '/images/hero/hero-2.png'
