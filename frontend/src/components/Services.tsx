@@ -22,7 +22,7 @@ const Services = () => {
         'Partnership with premium manufacturers',
         'Complete floor solutions'
       ],
-      image: '/images/services/service-consultation.png'
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80'
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const Services = () => {
         'Diagnostic excellence',
         'Fast turnaround times'
       ],
-      image: '/images/services/service-repairs.png'
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80'
     },
     {
       id: 3,
@@ -48,7 +48,7 @@ const Services = () => {
         'Performance optimization',
         'Detailed reporting'
       ],
-      image: '/images/services/service-maintenance.png'
+      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80'
     },
     {
       id: 4,
@@ -61,7 +61,7 @@ const Services = () => {
         'Hardware support (Toshiba, IBM, Fujitsu)',
         'Ongoing maintenance'
       ],
-      image: '/images/services/service-consultation.png'
+      image: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80'
     },
     {
       id: 5,
@@ -74,7 +74,7 @@ const Services = () => {
         'Note recycler support',
         'Compliance & reliability'
       ],
-      image: '/images/services/service-maintenance.png'
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80'
     },
     {
       id: 6,
@@ -87,7 +87,7 @@ const Services = () => {
         'Content management support',
         'Service & maintenance'
       ],
-      image: '/images/services/service-sales.png'
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'
     }
   ]
 
@@ -145,7 +145,7 @@ const Services = () => {
                     ))}
                   </ul>
                   
-                  <a href="#contact" className="btn btn-danger mt-3">
+                  <a href="#contact" className="btn btn-primary mt-3">
                     Get Started
                   </a>
                 </div>

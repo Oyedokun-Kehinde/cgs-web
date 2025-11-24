@@ -209,7 +209,7 @@ const ContactForm = () => {
                 <div className="contact-info-content">
                   <h5>24/7 Emergency Service</h5>
                   <p className="mb-0">Emergency hotline available</p>
-                  <a href="tel:0433323606" className="text-danger">0433 323 606</a>
+                  <a href="tel:0433323606" className="text-primary">0433 323 606</a>
                 </div>
               </div>
             </div>

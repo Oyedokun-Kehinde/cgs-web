@@ -27,12 +27,14 @@ const Footer = () => {
           <div className="row">
             {/* Company Info */}
             <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
-              <img 
-                src="/images/logo/new-footer-logo.png" 
-                alt="Cooper Gaming Services" 
-                className="footer-logo mb-3"
-                style={{ width: '250px', height: 'auto' }}
-              />
+              <ScrollLink to="home" smooth={true} duration={500} style={{ cursor: 'pointer' }}>
+                <img 
+                  src="/images/logo/new-footer-logo.png" 
+                  alt="Cooper Gaming Services" 
+                  className="footer-logo mb-3"
+                  style={{ width: '250px', height: 'auto' }}
+                />
+              </ScrollLink>
               <p className="footer-description">
                 Queensland's premier gaming and technology specialists, providing comprehensive 
                 gaming design, IT support, and maintenance solutions for over 15 years.
@@ -104,7 +106,7 @@ const Footer = () => {
               </ul>
               <div className="emergency-contact mt-3">
                 <strong>24/7 Emergency Service:</strong>
-                <a href="tel:0433323606" className="d-block text-danger">
+                <a href="tel:0433323606" className="d-block text-primary">
                   <i className="bi bi-telephone-fill"></i> 0433 323 606
                 </a>
               </div>
@@ -123,7 +125,7 @@ const Footer = () => {
             </div>
             <div className="col-md-6 text-center text-md-end">
               <p className="mb-0">
-                Website Crafted by <a href="https://athenanetworks.com.au/" target="_blank" rel="noopener noreferrer" className="text-danger">Athena Networks</a>
+                Website Crafted by <a href="https://athenanetworks.com.au/" target="_blank" rel="noopener noreferrer" className="text-primary">Athena Networks</a>
               </p>
             </div>
           </div>
