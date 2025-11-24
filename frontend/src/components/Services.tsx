@@ -22,7 +22,7 @@ const Services = () => {
         'Partnership with premium manufacturers',
         'Complete floor solutions'
       ],
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80'
+      image: '/images/services/service-consultation.png'
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const Services = () => {
         'Diagnostic excellence',
         'Fast turnaround times'
       ],
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80'
+      image: '/images/services/service-repairs.png'
     },
     {
       id: 3,
@@ -48,7 +48,7 @@ const Services = () => {
         'Performance optimization',
         'Detailed reporting'
       ],
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80'
+      image: '/images/services/service-maintenance.png'
     },
     {
       id: 4,
