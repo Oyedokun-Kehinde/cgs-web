@@ -40,7 +40,7 @@ const Header = () => {
               {/* <span className="info-item">
                 <i className="bi bi-geo-alt"></i>
                 Brisbane, Queensland
-              </span> */}
+              </span> */}UPDATE
               <span className="info-item">
                 <i className="bi bi-clock"></i>
                 Mon-Fri: 8AM-6PM | Sat: 9AM-1PM

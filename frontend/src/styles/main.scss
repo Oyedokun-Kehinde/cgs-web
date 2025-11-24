@@ -42,8 +42,6 @@ $btn-padding-x: 2rem;
 }
 
 html {
-  overflow-x: hidden;
-  overflow-y: auto;
   width: 100%;
   max-width: 100vw;
 }
@@ -53,8 +51,6 @@ body {
   font-family: $font-family !important;
   line-height: 1.6;
   color: $body-color;
-  overflow-x: hidden;
-  overflow-y: auto;
   width: 100%;
   max-width: 100vw;
   position: relative;
@@ -85,7 +81,6 @@ body {
 }
 
 #root {
-  overflow-x: hidden !important;
   width: 100%;
   max-width: 100vw;
 }
@@ -1585,7 +1580,7 @@ a {
   }
 }
 
-// Prevent Overflow from all Sections
+// Container Styling
 .container,
 .container-fluid {
   max-width: 100% !important;
@@ -1593,7 +1588,6 @@ a {
   padding-right: 1rem !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  overflow-x: hidden !important;
 }
 
 .row {
