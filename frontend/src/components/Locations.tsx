@@ -90,7 +90,7 @@ const Locations = () => {
               </p>
               <p>
                 <i className="bi bi-telephone"></i>
-                <a href="tel:+61712345678">+61 7 1234 5678</a>
+                <a href="tel:0433323606">0433 323 606</a>
               </p>
               <p>
                 <i className="bi bi-envelope"></i>

@@ -31,7 +31,7 @@ const Footer = () => {
                 src="/images/logo/new-footer-logo.png" 
                 alt="Cooper Gaming Services" 
                 className="footer-logo mb-3"
-                style={{ width: '337.5px', height: 'auto' }}
+                style={{ width: '250px', height: 'auto' }}
               />
               <p className="footer-description">
                 Queensland's premier gaming and technology specialists, providing comprehensive 
@@ -85,13 +85,13 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6">
               <h5 className="footer-title">Contact Us</h5>
               <ul className="footer-contact">
-                <li>
+                {/* <li>
                   <i className="bi bi-geo-alt"></i>
                   <span>Brisbane, Queensland, Australia</span>
-                </li>
+                </li> */}
                 <li>
                   <i className="bi bi-telephone"></i>
-                  <a href="tel:+61712345678">+61 7 1234 5678</a>
+                  <a href="tel:0433323606">0433 323 606</a>
                 </li>
                 <li>
                   <i className="bi bi-envelope"></i>
@@ -104,8 +104,8 @@ const Footer = () => {
               </ul>
               <div className="emergency-contact mt-3">
                 <strong>24/7 Emergency Service:</strong>
-                <a href="tel:+61400000000" className="d-block text-danger">
-                  <i className="bi bi-telephone-fill"></i> +61 400 000 000
+                <a href="tel:0433323606" className="d-block text-danger">
+                  <i className="bi bi-telephone-fill"></i> 0433 323 606
                 </a>
               </div>
             </div>

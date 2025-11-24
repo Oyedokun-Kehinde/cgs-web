@@ -15,7 +15,7 @@ const CTA = () => {
               <i className="bi bi-chat-dots me-2"></i>
               Get Free Quote
             </a>
-            <a href="tel:+61712345678" className="btn btn-outline-light btn-lg mb-2">
+            <a href="tel:0433323606" className="btn btn-outline-light btn-lg mb-2">
               <i className="bi bi-telephone me-2"></i>
               Call Now
             </a>

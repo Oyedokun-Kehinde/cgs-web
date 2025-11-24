@@ -175,7 +175,7 @@ const ContactForm = () => {
                 </div>
                 <div className="contact-info-content">
                   <h5>Phone</h5>
-                  <a href="tel:+61712345678">+61 7 1234 5678</a>
+                  <a href="tel:0433323606">0433 323 606</a>
                   <p className="text-muted small mb-0">Mon-Fri: 8AM-6PM, Sat: 9AM-1PM</p>
                 </div>
               </div>
@@ -191,7 +191,7 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div className="contact-info-item">
+              {/* <div className="contact-info-item">
                 <div className="contact-info-icon">
                   <i className="bi bi-geo-alt"></i>
                 </div>
@@ -200,7 +200,7 @@ const ContactForm = () => {
                   <p className="mb-0">Brisbane, Queensland</p>
                   <p className="text-muted small mb-0">Servicing all of QLD</p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="contact-info-item">
                 <div className="contact-info-icon">
@@ -209,7 +209,7 @@ const ContactForm = () => {
                 <div className="contact-info-content">
                   <h5>24/7 Emergency Service</h5>
                   <p className="mb-0">Emergency hotline available</p>
-                  <a href="tel:+61400000000" className="text-danger">+61 400 000 000</a>
+                  <a href="tel:0433323606" className="text-danger">0433 323 606</a>
                 </div>
               </div>
             </div>

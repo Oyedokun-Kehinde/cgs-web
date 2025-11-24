@@ -35,12 +35,12 @@ const Header = () => {
               </span>
               <span className="info-item">
                 <i className="bi bi-telephone"></i>
-                <a href="tel:+61712345678">+61 7 1234 5678</a>
+                <a href="tel:0433323606">0433 323 606</a>
               </span>
-              <span className="info-item">
+              {/* <span className="info-item">
                 <i className="bi bi-geo-alt"></i>
                 Brisbane, Queensland
-              </span>
+              </span> */}
               <span className="info-item">
                 <i className="bi bi-clock"></i>
                 Mon-Fri: 8AM-6PM | Sat: 9AM-1PM
@@ -76,7 +76,7 @@ const Header = () => {
                 src="/images/logo/new-header-logo.png" 
                 alt="Cooper Gaming Services" 
                 className="brand-logo"
-                style={{ width: '337.5px', height: 'auto' }}
+                style={{ width: '250px', height: 'auto' }}
               />
             </ScrollLink>
 
@@ -162,7 +162,7 @@ const Header = () => {
             </ScrollLink>
             <div className="offcanvas-contact mt-4">
               <h5>Contact Us</h5>
-              <p><i className="bi bi-telephone"></i> +61 7 1234 5678</p>
+              <p><i className="bi bi-telephone"></i> 0433 323 606</p>
               <p><i className="bi bi-envelope"></i> info@coopergamingservices.com</p>
               <p><i className="bi bi-clock"></i> Mon-Fri: 8AM-6PM</p>
             </div>
