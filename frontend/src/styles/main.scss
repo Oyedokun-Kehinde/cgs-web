@@ -266,10 +266,28 @@ a {
   
   &.scrolled {
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    
+    .navbar {
+      padding: 0.5rem 0;
+      
+      @media (max-width: 768px) {
+        padding: 0.75rem 0;
+      }
+    }
+    
+    .brand-logo {
+      width: 200px !important;
+      transition: width 0.3s ease;
+      
+      @media (max-width: 768px) {
+        width: 180px !important;
+      }
+    }
   }
   
   .navbar {
     padding: 0.75rem 0;
+    transition: padding 0.3s ease;
   }
   
   .container {
@@ -286,6 +304,7 @@ a {
     .brand-logo {
       max-width: 100%;
       height: auto;
+      transition: width 0.3s ease;
       
       @media (max-width: 768px) {
         width: 180px !important;
