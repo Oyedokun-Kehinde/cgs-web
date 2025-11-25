@@ -68,16 +68,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: $light-silver;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(37, 99, 235, 0.3);
+  background: $silver;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(37, 99, 235, 0.5);
+  background: darken($silver, 15%);
 }
 
 #root {
@@ -90,11 +90,25 @@ body {
   background-color: $primary-blue !important;
   border-color: $primary-blue !important;
   color: $white !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25) !important;
   
   &:hover, &:focus, &:active {
     background-color: darken($primary-blue, 10%) !important;
     border-color: darken($primary-blue, 10%) !important;
     color: $white !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35) !important;
+  }
+}
+
+.btn-secondary {
+  background-color: $silver !important;
+  border-color: $silver !important;
+  color: $dark-slate !important;
+  
+  &:hover, &:focus, &:active {
+    background-color: darken($silver, 10%) !important;
+    border-color: darken($silver, 10%) !important;
+    color: $dark-slate !important;
   }
 }
 
@@ -189,11 +203,12 @@ a {
 
 // Top Bar
 .top-bar {
-  background: $dark-slate;
+  background: linear-gradient(135deg, $dark-slate 0%, darken($dark-slate, 5%) 100%);
   color: $white;
   padding: 0.75rem 0;
   font-size: 0.875rem;
   width: 100%;
+  border-bottom: 2px solid $silver;
   
   @media (max-width: 991px) {
     display: none;
@@ -614,7 +629,7 @@ a {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    border: 2px solid transparent;
+    border: 2px solid $light-silver;
     transition: all 0.4s ease;
     height: 100%;
     
@@ -633,8 +648,8 @@ a {
     
     &:hover {
       transform: translateY(-10px);
-      border-color: $primary-blue;
-      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.25);
+      border-color: $silver;
+      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.25), 0 0 15px rgba(203, 213, 225, 0.3);
     }
     
     .value-icon {
@@ -692,6 +707,8 @@ a {
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: all 0.3s;
     border-top: 4px solid $primary-blue;
+    border: 1px solid $light-silver;
+    border-top-width: 4px;
     position: relative;
     margin-bottom: 1rem;
     
@@ -726,10 +743,17 @@ a {
       align-items: center;
       justify-content: center;
       font-size: 2.5rem;
-      background: $primary-blue;
+      background: linear-gradient(135deg, $primary-blue, #60a5fa);
       color: $white;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border: 3px solid $white;
       z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    &:hover .service-icon {
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4), 0 0 15px rgba(203, 213, 225, 0.3);
+      transform: scale(1.05);
     }
     
     &:hover .service-image img {
@@ -815,19 +839,20 @@ a {
     text-align: center;
     color: $white;
     height: 100%;
-    border: 2px solid transparent;
+    border: 2px solid rgba(203, 213, 225, 0.2);
     transition: all 0.4s ease;
     cursor: pointer;
     
     &:hover {
       transform: translateY(-10px);
       background: rgba(255,255,255,0.15);
-      border-color: $primary-blue;
-      box-shadow: 0 15px 40px rgba(37, 99, 235, 0.3);
+      border-color: $silver;
+      box-shadow: 0 15px 40px rgba(37, 99, 235, 0.3), 0 0 20px rgba(203, 213, 225, 0.2);
       
       .usp-icon {
         transform: scale(1.1) rotate(5deg);
         box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+        border: 2px solid $silver;
       }
     }
     

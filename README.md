@@ -11,10 +11,11 @@
 This document contains **everything** you need to understand, deploy, customize, and maintain the Cooper Gaming Services website. From installation to production deployment, SEO optimization to troubleshooting - it's all here.
 
 **Developed by:** [Athena Networks](https://athenanetworks.com.au/)  
-**Version:** 2.0.0  
+**Version:** 2.1.0  
 **Status:** ✅ Production Ready & Live  
 **Deployed:** Vercel (Auto-deploy from GitHub)  
-**Repository:** [github.com/Oyedokun-Kehinde/cgs-web](https://github.com/Oyedokun-Kehinde/cgs-web)
+**GitHub:** [github.com/Oyedokun-Kehinde/cgs-web](https://github.com/Oyedokun-Kehinde/cgs-web)  
+**GitLab:** [gitlab.athenanetworks.com.au/athenanetworks/cgs-web](https://gitlab.athenanetworks.com.au/athenanetworks/cgs-web)
 
 ---
 
@@ -68,18 +69,23 @@ Cooper Gaming Services website is a comprehensive business solution for gaming a
 ## ✨ Features
 
 ### Frontend
-- 🎨 **Modern UI/UX** - Professional blue/silver design matching uniforms
+- 🎨 **Modern UI/UX** - Professional blue/silver design with extensive silver accents
 - 📱 **Fully Responsive** - Mobile-first, works on all devices
-- 📌 **Sticky Header** - Fixed navigation on desktop and mobile
+- 📌 **Shrinking Sticky Header** - Dynamic header that reduces height on scroll
 - 🎭 **Interactive Components** - Hero slider, animated counters, smooth scrolling
 - ✅ **Real-time Validation** - Client-side form validation with visual feedback
 - 🎯 **Enhanced Footer** - White hover links with smooth animations, section underlines
+- 🖼️ **Professional Branding** - New CGS Cooper logos (header & footer optimized)
+- 💎 **Silver Touches** - Silver accents on scrollbars, borders, shadows, and hover effects
 - ⚡ **Fast Loading** - Optimized images (local + Unsplash CDN) and code splitting
 
 ### Backend
-- 📧 **Email Integration** - Admin notifications & customer confirmations
-- 🔒 **Security Features** - Rate limiting, CORS, validation, anti-spam
-- 💾 **Form Processing** - Server-side validation and sanitization
+- 📧 **Smart Email System** - Professional HTML templates with dynamic branding
+- 🔗 **Environment-Aware** - Automatic URL detection using FRONTEND_URL variable
+- 🎨 **Branded Emails** - Blue/silver theme with company logos embedded
+- 🔒 **Security** - Rate limiting, input validation, CORS protection, honeypot fields
+- 🌐 **API** - RESTful contact form submission endpoint
+- ⚡ **Serverless** - Vercel serverless functions for backend logictization
 - 📝 **Logging** - Request logging with Morgan
 - ⚙️ **Environment Config** - Secure credential management
 

@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
               <ScrollLink to="home" smooth={true} duration={500} style={{ cursor: 'pointer' }}>
                 <img 
-                  src="/images/logo/new-footer-logo.png" 
+                  src="/images/logo/cgs-cooper-logo-footer.png" 
                   alt="Cooper Gaming Services" 
                   className="footer-logo mb-3"
                   style={{ width: '250px', height: 'auto' }}

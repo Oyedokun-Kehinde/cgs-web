@@ -38,20 +38,22 @@ export const sendAdminNotification = async (formData) => {
         <style>
           body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
           .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-          .header { background: linear-gradient(135deg, #dc3545, #ff6b7a); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+          .header { background: linear-gradient(135deg, #2563eb, #1e40af); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
           .header h1 { margin: 0; font-size: 24px; }
-          .content { background: #f8f9fa; padding: 30px; border-radius: 0 0 10px 10px; }
+          .header img { max-width: 200px; margin-bottom: 15px; }
+          .content { background: #f1f5f9; padding: 30px; border-radius: 0 0 10px 10px; }
           .field { margin-bottom: 20px; }
-          .field-label { font-weight: bold; color: #2c3e50; margin-bottom: 5px; }
-          .field-value { background: white; padding: 10px; border-radius: 5px; border-left: 4px solid #dc3545; }
-          .message-box { background: white; padding: 15px; border-radius: 5px; border-left: 4px solid #dc3545; white-space: pre-wrap; }
-          .footer { text-align: center; margin-top: 20px; color: #95a5a6; font-size: 12px; }
-          .badge { background: #dc3545; color: white; padding: 5px 10px; border-radius: 5px; display: inline-block; font-size: 12px; }
+          .field-label { font-weight: bold; color: #334155; margin-bottom: 5px; }
+          .field-value { background: white; padding: 10px; border-radius: 5px; border-left: 4px solid #2563eb; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+          .message-box { background: white; padding: 15px; border-radius: 5px; border-left: 4px solid #cbd5e1; white-space: pre-wrap; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+          .footer { text-align: center; margin-top: 20px; color: #64748b; font-size: 12px; }
+          .badge { background: #2563eb; color: white; padding: 5px 10px; border-radius: 5px; display: inline-block; font-size: 12px; box-shadow: 0 2px 4px rgba(37,99,235,0.3); }
         </style>
       </head>
       <body>
         <div class="container">
           <div class="header">
+            <img src="${process.env.FRONTEND_URL || 'https://coopergamingservices.com'}/images/logo/cgs-cooper-logo-final.png" alt="Cooper Gaming Services" style="max-width: 200px; height: auto;" />
             <h1>📬 New Contact Form Submission</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9;">Cooper Gaming Services</p>
           </div>
@@ -69,12 +71,12 @@ export const sendAdminNotification = async (formData) => {
             
             <div class="field">
               <div class="field-label">Email:</div>
-              <div class="field-value"><a href="mailto:${email}" style="color: #dc3545; text-decoration: none;">${email}</a></div>
+              <div class="field-value"><a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a></div>
             </div>
             
             <div class="field">
               <div class="field-label">Phone:</div>
-              <div class="field-value"><a href="tel:${phone}" style="color: #dc3545; text-decoration: none;">${phone}</a></div>
+              <div class="field-value"><a href="tel:${phone}" style="color: #2563eb; text-decoration: none;">${phone}</a></div>
             </div>
             
             <div class="field">
@@ -137,14 +139,15 @@ export const sendCustomerConfirmation = async (formData) => {
         <style>
           body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
           .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-          .header { background: linear-gradient(135deg, #dc3545, #ff6b7a); color: white; padding: 40px; text-align: center; border-radius: 10px 10px 0 0; }
+          .header { background: linear-gradient(135deg, #2563eb, #1e40af); color: white; padding: 40px; text-align: center; border-radius: 10px 10px 0 0; }
           .header h1 { margin: 0; font-size: 28px; }
-          .content { background: white; padding: 30px; border: 1px solid #e0e0e0; border-top: none; }
-          .message-box { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #dc3545; }
-          .info-box { background: #fff3cd; border: 1px solid #ffc107; padding: 15px; border-radius: 5px; margin: 20px 0; }
-          .footer { background: #2c3e50; color: white; padding: 30px; text-align: center; border-radius: 0 0 10px 10px; }
-          .footer a { color: #dc3545; text-decoration: none; }
-          .button { display: inline-block; background: #dc3545; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin: 10px 0; }
+          .header img { max-width: 250px; margin-bottom: 20px; }
+          .content { background: white; padding: 30px; border: 1px solid #cbd5e1; border-top: none; }
+          .message-box { background: #f1f5f9; padding: 20px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #cbd5e1; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+          .info-box { background: #dbeafe; border: 1px solid #2563eb; padding: 15px; border-radius: 5px; margin: 20px 0; }
+          .footer { background: #334155; color: #cbd5e1; padding: 30px; text-align: center; border-radius: 0 0 10px 10px; }
+          .footer a { color: #2563eb; text-decoration: none; font-weight: 600; }
+          .button { display: inline-block; background: #2563eb; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin: 10px 0; box-shadow: 0 4px 6px rgba(37,99,235,0.3); }
           .contact-info { margin: 15px 0; }
           .contact-info div { margin: 8px 0; }
         </style>
@@ -152,6 +155,7 @@ export const sendCustomerConfirmation = async (formData) => {
       <body>
         <div class="container">
           <div class="header">
+            <img src="${process.env.FRONTEND_URL || 'https://coopergamingservices.com'}/images/logo/cgs-cooper-logo-final.png" alt="Cooper Gaming Services" style="max-width: 250px; height: auto;" />
             <h1>✅ Thank You, ${name.split(' ')[0]}!</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9;">We've received your inquiry</p>
           </div>
@@ -174,22 +178,27 @@ export const sendCustomerConfirmation = async (formData) => {
             <p>In the meantime, feel free to explore our services or contact us directly if you have any urgent questions.</p>
             
             <div style="text-align: center; margin: 30px 0;">
-              <a href="tel:+61712345678" class="button">📞 Call Us: +61 7 1234 5678</a>
+              <a href="${process.env.FRONTEND_URL || 'https://coopergamingservices.com'}" class="button" style="display: inline-block; background: #2563eb; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin-bottom: 10px; box-shadow: 0 4px 6px rgba(37,99,235,0.3);">🌐 Visit Our Website</a>
+              <br>
+              <a href="tel:0433323606" class="button" style="display: inline-block; background: #2563eb; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin: 10px 0; box-shadow: 0 4px 6px rgba(37,99,235,0.3);">📞 Call Us: 0433 323 606</a>
             </div>
             
             <div class="contact-info">
               <strong>Contact Information:</strong>
               <div>📧 Email: info@coopergamingservices.com</div>
-              <div>📍 Location: Brisbane, Queensland</div>
-              <div>🕐 Hours: Mon-Fri 8AM-6PM, Sat 9AM-1PM</div>
-              <div style="color: #dc3545; font-weight: bold;">🚨 24/7 Emergency: +61 400 000 000</div>
+              <div>� Phone: 0433 323 606</div>
+              <div>�� Location: Brisbane, Queensland</div>
+              <div>🕐 Hours: Mon-Fri 8AM-6PM | Sat 9AM-1PM</div>
             </div>
           </div>
           
           <div class="footer">
             <p style="margin: 0 0 15px 0;"><strong>Cooper Gaming Services</strong></p>
-            <p style="margin: 0 0 10px 0;">Excellence in Gaming Solutions</p>
-            <p style="font-size: 12px; opacity: 0.8; margin: 15px 0 0 0;">
+            <p style="margin: 0 0 10px 0;">Queensland's Premier Gaming & Technology Specialists</p>
+            <p style="font-size: 12px; opacity: 0.8; margin: 15px 0 5px 0;">
+              <a href="${process.env.FRONTEND_URL || 'https://coopergamingservices.com'}" style="color: #2563eb; text-decoration: none; font-weight: 600;">Visit Our Website</a>
+            </p>
+            <p style="font-size: 12px; opacity: 0.8; margin: 5px 0 0 0;">
               &copy; ${new Date().getFullYear()} Cooper Gaming Services. All rights reserved.
             </p>
           </div>
@@ -208,11 +217,11 @@ Your Message:
 ${message}
 
 Contact Information:
-Phone: +61 7 1234 5678
+Phone: 0433 323 606
 Email: info@coopergamingservices.com
 Location: Brisbane, Queensland
-Hours: Mon-Fri 8AM-6PM, Sat 9AM-1PM
-24/7 Emergency: +61 400 000 000
+Hours: Mon-Fri 8AM-6PM | Sat 9AM-1PM
+Website: ${process.env.FRONTEND_URL || 'https://coopergamingservices.com'}
 
 Best regards,
 Cooper Gaming Services Team
