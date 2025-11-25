@@ -76,7 +76,7 @@ const Header = () => {
                 src="/images/logo/cgs-cooper-logo-final.png" 
                 alt="Cooper Gaming Services" 
                 className="brand-logo"
-                style={{ width: '250px', height: 'auto' }}
+                style={{ width: '220px', height: 'auto' }}
               />
             </ScrollLink>
 

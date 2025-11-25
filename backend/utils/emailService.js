@@ -53,7 +53,7 @@ export const sendAdminNotification = async (formData) => {
       <body>
         <div class="container">
           <div class="header">
-            <img src="${process.env.FRONTEND_URL || 'https://coopergamingservices.com'}/images/logo/cgs-cooper-logo-final.png" alt="Cooper Gaming Services" style="max-width: 200px; height: auto;" />
+            <img src="https://drive.google.com/uc?export=view&id=1w7ud83PUkOxJnL6mgFVv4LEEweIf9Z2I" alt="Cooper Gaming Services" style="max-width: 200px; height: auto;" />
             <h1>📬 New Contact Form Submission</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9;">Cooper Gaming Services</p>
           </div>
@@ -155,7 +155,7 @@ export const sendCustomerConfirmation = async (formData) => {
       <body>
         <div class="container">
           <div class="header">
-            <img src="${process.env.FRONTEND_URL || 'https://coopergamingservices.com'}/images/logo/cgs-cooper-logo-final.png" alt="Cooper Gaming Services" style="max-width: 250px; height: auto;" />
+            <img src="https://drive.google.com/uc?export=view&id=1bYEnr63ome0j9Mn2s8DdMcokrtx3_rDL" alt="Cooper Gaming Services" style="max-width: 250px; height: auto;" />
             <h1>✅ Thank You, ${name.split(' ')[0]}!</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9;">We've received your inquiry</p>
           </div>

@@ -87,28 +87,90 @@ body {
 
 // Force Bootstrap button colors
 .btn-primary {
-  background-color: $primary-blue !important;
-  border-color: $primary-blue !important;
+  background: linear-gradient(135deg, $primary-blue, #1e40af) !important;
+  border: none !important;
   color: $white !important;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 2rem !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4), 0 2px 8px rgba(203, 213, 225, 0.3) !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
   
-  &:hover, &:focus, &:active {
-    background-color: darken($primary-blue, 10%) !important;
-    border-color: darken($primary-blue, 10%) !important;
-    color: $white !important;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35) !important;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  &:hover {
+    background: linear-gradient(135deg, #1e40af, $primary-blue) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5), 0 4px 12px rgba(203, 213, 225, 0.4) !important;
+    
+    &::before {
+      left: 100%;
+    }
+  }
+  
+  &:focus, &:active {
+    background: linear-gradient(135deg, darken($primary-blue, 10%), #1e40af) !important;
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.5), 0 4px 15px rgba(37, 99, 235, 0.4) !important;
+    transform: translateY(0) !important;
   }
 }
 
 .btn-secondary {
-  background-color: $silver !important;
-  border-color: $silver !important;
+  background: linear-gradient(135deg, $white, $light-silver) !important;
+  border: 2px solid $silver !important;
   color: $dark-slate !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 2rem !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 10px rgba(203, 213, 225, 0.3) !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
   
-  &:hover, &:focus, &:active {
-    background-color: darken($silver, 10%) !important;
-    border-color: darken($silver, 10%) !important;
-    color: $dark-slate !important;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s, height 0.5s;
+  }
+  
+  &:hover {
+    background: linear-gradient(135deg, $light-silver, $white) !important;
+    border-color: $primary-blue !important;
+    color: $primary-blue !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 20px rgba(203, 213, 225, 0.5), 0 2px 10px rgba(37, 99, 235, 0.2) !important;
+    
+    &::after {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  &:focus, &:active {
+    background: $light-silver !important;
+    border-color: $primary-blue !important;
+    color: $primary-blue !important;
+    box-shadow: 0 0 0 0.25rem rgba(203, 213, 225, 0.5), 0 2px 10px rgba(203, 213, 225, 0.3) !important;
   }
 }
 
@@ -291,21 +353,21 @@ a {
     }
     
     .brand-logo {
-      width: 180px !important;
+      width: 170px !important;
       transition: width 0.3s ease;
       
       @media (max-width: 768px) {
-        width: 160px !important;
+        width: 140px !important;
       }
     }
   }
   
   .navbar {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     transition: padding 0.3s ease;
     
     @media (max-width: 768px) {
-      padding: 0.75rem 0;
+      padding: 0.5rem 0;
     }
   }
   
@@ -326,7 +388,7 @@ a {
       transition: width 0.3s ease;
       
       @media (max-width: 768px) {
-        width: 180px !important;
+        width: 150px !important;
         height: auto !important;
       }
     }
@@ -532,6 +594,12 @@ a {
     
     img {
       border-radius: 10px;
+      min-height: 500px;
+      object-fit: cover;
+      
+      @media (max-width: 768px) {
+        min-height: 300px;
+      }
     }
     
     .experience-badge {
@@ -646,7 +714,7 @@ a {
       }
       
       &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 4rem;
       }
     }
     
