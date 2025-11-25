@@ -44,18 +44,18 @@ export const validateContactForm = [
         throw new Error('URLs and website links are not allowed in the message. Please focus on legitimate gaming service inquiries.')
       }
       
-      // Block spam keywords (case-insensitive)
+      // Block spam keywords (case-insensitive, specific phrases)
       const spamKeywords = [
-        'seo', 'design', 'mobile app', 'virtual assistant', 'va service',
-        'web development', 'app development', 'digital marketing', 
-        'social media marketing', 'smm', 'content writing', 'copywriting',
-        'graphic design', 'logo design', 'website design', 'web design',
-        'wordpress', 'shopify', 'ecommerce', 'e-commerce',
-        'backlinks', 'link building', 'ranking', 'google ranking',
-        'traffic', 'increase traffic', 'boost sales', 'lead generation',
-        'freelancer', 'fiverr', 'upwork', 'outsource', 'offshore',
-        'cheap service', 'affordable price', 'best price', 'discount',
-        'crypto', 'bitcoin', 'forex', 'trading', 'investment'
+        'seo service', 'SEO', 'mobile app development', 'Mobile app development', 'virtual assistant service', 'va service',
+        'web development service', 'app development service', 'digital marketing service', 
+        'social media marketing', 'smm service', 'content writing service', 'copywriting service',
+        'graphic design service', 'logo design service', 'website design service', 'web design service',
+        'wordpress development', 'shopify store', 'ecommerce solution',
+        'backlink service', 'link building service', 'ranking service', 'google ranking service',
+        'increase traffic', 'boost sales', 'lead generation service',
+        'freelancer service', 'fiverr gig', 'upwork profile', 'outsource team', 'offshore developer',
+        'cheap service', 'affordable price', 'best price guarantee', 'discount offer',
+        'crypto trading', 'bitcoin investment', 'forex trading', 'investment opportunity'
       ]
       
       const lowerValue = value.toLowerCase()

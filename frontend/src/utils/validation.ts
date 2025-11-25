@@ -66,40 +66,6 @@ export const validateField = (name: string, value: string, _formData?: ContactFo
       if (value.length > 500) {
         return 'Message must not exceed 500 characters'
       }
-      
-      // Block ALL URLs (real-time)
-      const urlPattern = /(?:https?:\/\/|www\.|[a-zA-Z0-9-]+\.[a-z]{2,})/gi
-      if (urlPattern.test(value)) {
-        return 'URLs and website links are not allowed. Please focus on legitimate gaming service inquiries.'
-      }
-      
-      // Block spam keywords (real-time)
-      const spamKeywords = [
-        'seo', 'design', 'mobile app', 'virtual assistant', 'va service',
-        'web development', 'app development', 'digital marketing', 
-        'social media marketing', 'smm', 'content writing', 'copywriting',
-        'graphic design', 'logo design', 'website design', 'web design',
-        'wordpress', 'shopify', 'ecommerce', 'e-commerce',
-        'backlinks', 'link building', 'ranking', 'google ranking',
-        'traffic', 'increase traffic', 'boost sales', 'lead generation',
-        'freelancer', 'fiverr', 'upwork', 'outsource', 'offshore',
-        'cheap service', 'affordable price', 'best price', 'discount',
-        'crypto', 'bitcoin', 'forex', 'trading', 'investment'
-      ]
-      
-      const lowerValue = value.toLowerCase()
-      const foundKeywords = spamKeywords.filter(keyword => lowerValue.includes(keyword))
-      
-      if (foundKeywords.length > 0) {
-        return 'Your message contains prohibited keywords. Please focus on legitimate gaming service inquiries.'
-      }
-      
-      // Check for excessive caps
-      const capsRatio = (value.match(/[A-Z]/g) || []).length / value.length
-      if (capsRatio > 0.5 && value.length > 20) {
-        return 'Please avoid excessive use of capital letters. Please focus on legitimate gaming service inquiries.'
-      }
-      
       return ''
 
     default:
