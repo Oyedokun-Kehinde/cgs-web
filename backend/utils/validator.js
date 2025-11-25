@@ -5,8 +5,7 @@ export const validateContactForm = [
     .trim()
     .notEmpty().withMessage('Name is required')
     .isLength({ min: 2, max: 50 }).withMessage('Name must be between 2 and 50 characters')
-    .matches(/^[a-zA-Z\s'-]+$/).withMessage('Name can only contain letters, spaces, hyphens, and apostrophes')
-    .escape(),
+    .matches(/^[a-zA-Z\s'-]+$/).withMessage('Name can only contain letters, spaces, hyphens, and apostrophes'),
 
   body('email')
     .trim()
@@ -41,12 +40,12 @@ export const validateContactForm = [
       // Block ALL URLs
       const urlPattern = /(?:https?:\/\/|www\.|[a-zA-Z0-9-]+\.[a-z]{2,})/gi
       if (urlPattern.test(value)) {
-        throw new Error('URLs and website links are not allowed in the message. Please focus on legitimate gaming service inquiries.')
+        throw new Error('URLs and website links are not allowed.')
       }
       
       // Block spam keywords (case-insensitive, specific phrases)
       const spamKeywords = [
-        'seo service', 'SEO', 'mobile app development', 'Mobile app development', 'virtual assistant service', 'va service',
+        'seo service', 'mobile app development', 'virtual assistant service', 'va service',
         'web development service', 'app development service', 'digital marketing service', 
         'social media marketing', 'smm service', 'content writing service', 'copywriting service',
         'graphic design service', 'logo design service', 'website design service', 'web design service',
@@ -62,16 +61,15 @@ export const validateContactForm = [
       const foundKeywords = spamKeywords.filter(keyword => lowerValue.includes(keyword))
       
       if (foundKeywords.length > 0) {
-        throw new Error('Your message contains prohibited keywords. Please focus on legitimate gaming service inquiries.')
+        throw new Error('Your message contains prohibited keywords.')
       }
       
       // Check for excessive caps
       const capsRatio = (value.match(/[A-Z]/g) || []).length / value.length
       if (capsRatio > 0.5 && value.length > 20) {
-        throw new Error('Please avoid excessive use of capital letters. Please focus on legitimate gaming service inquiries.')
+        throw new Error('Please avoid excessive use of capital letters.')
       }
       
       return true
-    })
-    .escape(),
+    }),
 ]

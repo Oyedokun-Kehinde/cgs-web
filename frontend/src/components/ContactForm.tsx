@@ -135,10 +135,21 @@ const ContactForm = () => {
         setTouched({})
         setErrors({})
       } else {
+        // Extract error messages from validation errors
+        let errorMessage = data.message || 'Something went wrong. Please try again.'
+        
+        if (data.errors && Array.isArray(data.errors) && data.errors.length > 0) {
+          // Get all error messages and join them
+          const errorMessages = data.errors.map((err: any) => err.msg).filter(Boolean)
+          if (errorMessages.length > 0) {
+            errorMessage = errorMessages.join('. ')
+          }
+        }
+        
         setModal({
           show: true,
           type: 'error',
-          message: data.message || 'Something went wrong. Please try again.'
+          message: errorMessage
         })
       }
     } catch (error) {
