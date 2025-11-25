@@ -40,7 +40,6 @@ export const sendAdminNotification = async (formData) => {
           .container { max-width: 600px; margin: 0 auto; padding: 20px; }
           .header { background: linear-gradient(135deg, #2563eb, #1e40af); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
           .header h1 { margin: 0; font-size: 24px; }
-          .header img { max-width: 200px; margin-bottom: 15px; }
           .content { background: #f1f5f9; padding: 30px; border-radius: 0 0 10px 10px; }
           .field { margin-bottom: 20px; }
           .field-label { font-weight: bold; color: #334155; margin-bottom: 5px; }
@@ -53,7 +52,6 @@ export const sendAdminNotification = async (formData) => {
       <body>
         <div class="container">
           <div class="header">
-            <img src="https://drive.google.com/uc?export=view&id=1w7ud83PUkOxJnL6mgFVv4LEEweIf9Z2I" alt="Cooper Gaming Services" style="max-width: 200px; height: auto;" />
             <h1>📬 New Contact Form Submission</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9;">Cooper Gaming Services</p>
           </div>
@@ -141,7 +139,6 @@ export const sendCustomerConfirmation = async (formData) => {
           .container { max-width: 600px; margin: 0 auto; padding: 20px; }
           .header { background: linear-gradient(135deg, #2563eb, #1e40af); color: white; padding: 40px; text-align: center; border-radius: 10px 10px 0 0; }
           .header h1 { margin: 0; font-size: 28px; }
-          .header img { max-width: 250px; margin-bottom: 20px; }
           .content { background: white; padding: 30px; border: 1px solid #cbd5e1; border-top: none; }
           .message-box { background: #f1f5f9; padding: 20px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #cbd5e1; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
           .info-box { background: #dbeafe; border: 1px solid #2563eb; padding: 15px; border-radius: 5px; margin: 20px 0; }
@@ -155,7 +152,6 @@ export const sendCustomerConfirmation = async (formData) => {
       <body>
         <div class="container">
           <div class="header">
-            <img src="https://drive.google.com/uc?export=view&id=1bYEnr63ome0j9Mn2s8DdMcokrtx3_rDL" alt="Cooper Gaming Services" style="max-width: 250px; height: auto;" />
             <h1>✅ Thank You, ${name.split(' ')[0]}!</h1>
             <p style="margin: 10px 0 0 0; opacity: 0.9;">We've received your inquiry</p>
           </div>

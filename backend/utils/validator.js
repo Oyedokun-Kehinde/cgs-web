@@ -38,10 +38,31 @@ export const validateContactForm = [
     .notEmpty().withMessage('Message is required')
     .isLength({ min: 10, max: 500 }).withMessage('Message must be between 10 and 500 characters')
     .custom((value) => {
-      // Check for excessive URLs
-      const urlCount = (value.match(/https?:\/\//g) || []).length
-      if (urlCount > 2) {
-        throw new Error('Message contains too many links')
+      // Block ALL URLs
+      const urlPattern = /(?:https?:\/\/|www\.|[a-zA-Z0-9-]+\.[a-z]{2,})/gi
+      if (urlPattern.test(value)) {
+        throw new Error('URLs and website links are not allowed in the message')
+      }
+      
+      // Block spam keywords (case-insensitive)
+      const spamKeywords = [
+        'seo', 'design', 'mobile app', 'virtual assistant', 'va service',
+        'web development', 'app development', 'digital marketing', 
+        'social media marketing', 'smm', 'content writing', 'copywriting',
+        'graphic design', 'logo design', 'website design', 'web design',
+        'wordpress', 'shopify', 'ecommerce', 'e-commerce',
+        'backlinks', 'link building', 'ranking', 'google ranking',
+        'traffic', 'increase traffic', 'boost sales', 'lead generation',
+        'freelancer', 'fiverr', 'upwork', 'outsource', 'offshore',
+        'cheap service', 'affordable price', 'best price', 'discount',
+        'crypto', 'bitcoin', 'forex', 'trading', 'investment'
+      ]
+      
+      const lowerValue = value.toLowerCase()
+      const foundKeywords = spamKeywords.filter(keyword => lowerValue.includes(keyword))
+      
+      if (foundKeywords.length > 0) {
+        throw new Error('Your message contains prohibited keywords. Please focus on legitimate gaming service inquiries.')
       }
       
       // Check for excessive caps
