@@ -291,18 +291,22 @@ a {
     }
     
     .brand-logo {
-      width: 200px !important;
+      width: 180px !important;
       transition: width 0.3s ease;
       
       @media (max-width: 768px) {
-        width: 180px !important;
+        width: 160px !important;
       }
     }
   }
   
   .navbar {
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
     transition: padding 0.3s ease;
+    
+    @media (max-width: 768px) {
+      padding: 0.75rem 0;
+    }
   }
   
   .container {
@@ -505,11 +509,11 @@ a {
 
 // About Section
 .about-section {
-  padding: 5rem 0;
+  padding: 5rem 0 6rem 0;
   overflow-x: hidden;
   
   @media (max-width: 768px) {
-    padding: 3rem 0;
+    padding: 3rem 0 4rem 0;
     
     .container {
       padding-left: 1.5rem;
@@ -634,11 +638,11 @@ a {
     height: 100%;
     
     @media (max-width: 991px) {
-      margin-top: 3rem !important;
+      margin-top: 3.5rem !important;
       margin-bottom: 2rem;
       
       &:first-child {
-        margin-top: 4rem !important;
+        margin-top: 4.5rem !important;
       }
       
       &:last-child {

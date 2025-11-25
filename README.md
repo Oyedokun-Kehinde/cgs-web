@@ -11,7 +11,7 @@
 This document contains **everything** you need to understand, deploy, customize, and maintain the Cooper Gaming Services website. From installation to production deployment, SEO optimization to troubleshooting - it's all here.
 
 **Developed by:** [Athena Networks](https://athenanetworks.com.au/)  
-**Version:** 2.1.0  
+**Version:** 2.2.0  
 **Status:** ✅ Production Ready & Live  
 **Deployed:** Vercel (Auto-deploy from GitHub)  
 **GitHub:** [github.com/Oyedokun-Kehinde/cgs-web](https://github.com/Oyedokun-Kehinde/cgs-web)  
@@ -63,6 +63,19 @@ Cooper Gaming Services website is a comprehensive business solution for gaming a
 - Rank for local Queensland gaming and technology services
 - Professional brand presence with modern blue/silver theme
 - Seamless Vercel auto-deployment from GitHub
+- Full SEO optimization with updated structured data
+- Environment-aware email system with professional branding
+
+### Latest Updates (v2.2.0)
+- ✅ Fixed email validation to match new service types
+- ✅ Reduced header size on desktop for better proportions
+- ✅ Added bottom padding to About Us section
+- ✅ Increased top margins for Vision/Mission/Values cards on smaller screens
+- ✅ Updated favicon from red (#dc3545) to blue (#2563eb)
+- ✅ Updated theme colors to match blue branding
+- ✅ Fixed SEO structured data with new phone number (+61433323606)
+- ✅ Updated all 6 service offerings in structured data
+- ✅ Complete SEO audit and optimization
 
 ---
 

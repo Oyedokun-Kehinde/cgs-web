@@ -24,10 +24,12 @@ export const validateContactForm = [
   body('serviceType')
     .notEmpty().withMessage('Please select a service type')
     .isIn([
-      'Gaming Machine Sales',
+      'Gaming Room Design & Consoles',
       'Technical Service & Repairs',
       'Preventative Maintenance',
-      'Consultation & Installation',
+      'Retail IT Support',
+      'Pay Systems Repairs & Maintenance',
+      'Digital Signage',
       'General Inquiry'
     ]).withMessage('Invalid service type selected'),
 
