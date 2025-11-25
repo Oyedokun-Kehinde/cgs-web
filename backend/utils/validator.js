@@ -41,7 +41,7 @@ export const validateContactForm = [
       // Block ALL URLs
       const urlPattern = /(?:https?:\/\/|www\.|[a-zA-Z0-9-]+\.[a-z]{2,})/gi
       if (urlPattern.test(value)) {
-        throw new Error('URLs and website links are not allowed in the message')
+        throw new Error('URLs and website links are not allowed in the message. Please focus on legitimate gaming service inquiries.')
       }
       
       // Block spam keywords (case-insensitive)
@@ -68,7 +68,7 @@ export const validateContactForm = [
       // Check for excessive caps
       const capsRatio = (value.match(/[A-Z]/g) || []).length / value.length
       if (capsRatio > 0.5 && value.length > 20) {
-        throw new Error('Please avoid excessive use of capital letters')
+        throw new Error('Please avoid excessive use of capital letters. Please focus on legitimate gaming service inquiries.')
       }
       
       return true

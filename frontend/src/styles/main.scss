@@ -353,17 +353,17 @@ a {
     }
     
     .brand-logo {
-      width: 170px !important;
+      width: 150px !important;
       transition: width 0.3s ease;
       
       @media (max-width: 768px) {
-        width: 140px !important;
+        width: 120px !important;
       }
     }
   }
   
   .navbar {
-    padding: 0.4rem 0;
+    padding: 0.3rem 0;
     transition: padding 0.3s ease;
     
     @media (max-width: 768px) {
@@ -1543,6 +1543,41 @@ a {
   height: 100%;
   background: rgba(0,0,0,0.5);
   z-index: 1050;
+}
+
+// Modal color overrides
+.modal-header {
+  &.bg-success {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+  }
+  
+  &.bg-danger {
+    background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  }
+  
+  &.bg-primary {
+    background: linear-gradient(135deg, $primary-blue, #1e40af) !important;
+  }
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  border-color: #10b981 !important;
+  
+  &:hover {
+    background: linear-gradient(135deg, #059669, #047857) !important;
+    border-color: #059669 !important;
+  }
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  border-color: #ef4444 !important;
+  
+  &:hover {
+    background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
+    border-color: #dc2626 !important;
+  }
 }
 
 // Off-Canvas Mobile Menu

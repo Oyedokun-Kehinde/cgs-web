@@ -30,12 +30,12 @@ const Modal = ({ show, type, message, onClose }: ModalProps) => {
   const modalConfig: Record<string, ModalConfig> = {
     success: {
       icon: 'bi-check-circle',
-      color: 'primary',
+      color: 'success',
       title: 'Success!'
     },
     error: {
       icon: 'bi-exclamation-circle',
-      color: 'primary',
+      color: 'danger',
       title: 'Error'
     },
     info: {
