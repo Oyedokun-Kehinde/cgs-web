@@ -22,7 +22,7 @@ const Services = () => {
         'Partnership with premium manufacturers',
         'Complete floor solutions'
       ],
-      image: '/images/services/service-consultation.png'
+      image: '/images/services/service-gaming-room.jpeg'
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const Services = () => {
         'Diagnostic excellence',
         'Fast turnaround times'
       ],
-      image: '/images/services/service-repairs.png'
+      image: '/images/services/service-technical.jpeg'
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ const Services = () => {
         'Hardware support (Toshiba, IBM, Fujitsu)',
         'Ongoing maintenance'
       ],
-      image: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80'
+      image: '/images/services/service-retail-it.jpeg'
     },
     {
       id: 5,
@@ -74,7 +74,7 @@ const Services = () => {
         'Note recycler support',
         'Compliance & reliability'
       ],
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80'
+      image: '/images/services/service-pay-systems.jpeg'
     },
     {
       id: 6,

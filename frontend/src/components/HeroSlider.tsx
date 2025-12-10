@@ -24,7 +24,7 @@ const HeroSlider = () => {
       description: 'Queensland\'s trusted partner for gaming room design, retail IT support, and complete technology services tailored to your venue\'s needs.',
       cta: 'Explore Services',
       ctaLink: 'services',
-      image: '/images/hero/new-hero.avif'
+      image: '/images/hero/newest-hero-1.jpeg'
     },
     {
       id: 2,
