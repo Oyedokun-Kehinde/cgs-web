@@ -28,7 +28,7 @@ export const sendAdminNotification = async (formData) => {
   const { name, email, phone, serviceType, message, submittedAt } = formData
 
   const mailOptions = {
-    from: `"CGS Website" <${process.env.SMTP_USER}>`,
+    from: `"CGS Website" <${process.env.SMTP_FROM}>`,
     to: process.env.ADMIN_EMAIL,
     subject: `🔔 New Contact Form Submission - ${serviceType}`,
     html: `
@@ -127,7 +127,7 @@ export const sendCustomerConfirmation = async (formData) => {
   const { name, email, serviceType, message } = formData
 
   const mailOptions = {
-    from: `"Cooper Gaming Services" <${process.env.SMTP_USER}>`,
+    from: `"Cooper Gaming Services" <${process.env.SMTP_FROM}>`,
     to: email,
     subject: 'Thank You for Contacting Cooper Gaming Services',
     html: `
