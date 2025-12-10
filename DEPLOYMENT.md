@@ -42,8 +42,8 @@ Before deploying, ensure you have:
 - **Deployment:** Static files + Serverless API
 
 ### Repository
+
 - **GitLab:** `https://gitlab.athenanetworks.com.au/athenanetworks/cgs-web.git`
-- **GitHub:** `https://github.com/Oyedokun-Kehinde/cgs-web.git`
 
 ### Directory Structure
 ```
@@ -101,22 +101,25 @@ NODE_ENV=production
 # The contact form sends emails via SMTP
 # You can use Gmail, Outlook, or any SMTP provider
 
-# Option 1: Gmail SMTP
-SMTP_HOST=smtp.gmail.com
+# SMTP Configuration
+# Use the client's email provider settings
+SMTP_HOST=mail.coopergamingservices.com
 SMTP_PORT=587
 SMTP_SECURE=false
-SMTP_USER=your-gmail@gmail.com
-SMTP_PASS=your-app-password
+SMTP_USER=info@coopergamingservices.com
+SMTP_PASS=mailbox-password-here
 
-# Option 2: Outlook/Office 365
+# Alternative: Gmail SMTP (requires App Password)
+# SMTP_HOST=smtp.gmail.com
+# SMTP_PORT=587
+# SMTP_SECURE=false
+# SMTP_USER=your-gmail@gmail.com
+# SMTP_PASS=your-app-password
+
+# Alternative: Outlook/Office 365
 # SMTP_HOST=smtp.office365.com
 # SMTP_PORT=587
 # SMTP_SECURE=false
-
-# Option 3: Custom SMTP Server
-# SMTP_HOST=mail.yourdomain.com
-# SMTP_PORT=465
-# SMTP_SECURE=true
 
 # ===========================================
 # EMAIL RECIPIENTS
@@ -131,17 +134,25 @@ ADMIN_EMAIL=info@coopergamingservices.com
 FRONTEND_URL=https://coopergamingservices.com
 ```
 
-### Gmail App Password Setup
+### SMTP Configuration Notes
 
-If using Gmail, you need an **App Password** (not your regular password):
+**Standard Mailbox (Recommended):**
 
-1. Go to [Google Account Security](https://myaccount.google.com/security)
-2. Enable **2-Step Verification** if not already enabled
-3. Go to **App passwords** (under "Signing in to Google")
-4. Select "Mail" and "Other (Custom name)"
-5. Enter "Cooper Gaming Services" as the name
-6. Click **Generate**
-7. Copy the 16-character password and use it as `SMTP_PASS`
+- `SMTP_HOST` - Your mail server (e.g., `mail.coopergamingservices.com`)
+- `SMTP_PORT` - Usually `587` (TLS) or `465` (SSL)
+- `SMTP_SECURE` - Set to `true` for port 465, `false` for port 587
+- `SMTP_USER` - The full email address (e.g., `info@coopergamingservices.com`)
+- `SMTP_PASS` - The mailbox password (same password used to login to email)
+
+**Gmail (Alternative):**
+
+If using Gmail, you need an App Password:
+
+1. Go to Google Account Security
+2. Enable 2-Step Verification
+3. Go to App passwords
+4. Generate a new app password for "Mail"
+5. Use the 16-character password as `SMTP_PASS`
 
 ### Important Notes
 
@@ -333,16 +344,6 @@ app.listen(PORT, () => {
 
 ---
 
-### Option B: Vercel Deployment (Current Setup)
-
-The project is already configured for Vercel. Simply:
-
-1. Connect the GitHub/GitLab repository to Vercel
-2. Set environment variables in Vercel dashboard
-3. Deploy automatically on push to `main` branch
-
----
-
 ## 🔒 SSL/HTTPS Configuration
 
 ### Using Let's Encrypt (Certbot)
@@ -452,6 +453,75 @@ sudo systemctl reload nginx
 #### 5. CORS errors
 **Cause:** Backend not allowing frontend origin  
 **Fix:** Ensure CORS is configured in backend
+
+---
+
+## 🔍 SEO Configuration
+
+The website includes comprehensive SEO setup in `frontend/index.html`:
+
+### Meta Tags
+
+| Tag | Value |
+|-----|-------|
+| Title | Cooper Gaming Services \| Gaming Machine Sales, Service & Maintenance Queensland |
+| Description | Queensland's premier gaming machine specialists. Professional EGM sales, 24/7 technical service, preventative maintenance & consultation. |
+| Keywords | gaming machines Queensland, poker machines Brisbane, EGM service, gaming machine sales, etc. |
+| Canonical URL | https://coopergamingservices.com |
+| Theme Color | #2563eb (Blue) |
+
+### Open Graph (Facebook/LinkedIn)
+
+- `og:type` - website
+- `og:title` - Cooper Gaming Services
+- `og:description` - Queensland's premier gaming machine specialists
+- `og:image` - Hero image for social sharing
+- `og:locale` - en_AU
+
+### Twitter Cards
+
+- `twitter:card` - summary_large_image
+- `twitter:title` - Cooper Gaming Services
+- `twitter:image` - Hero image
+
+### Geo Tags (Local SEO)
+
+- `geo.region` - AU-QLD
+- `geo.placename` - Brisbane
+- `geo.position` - -27.4705;153.0260
+
+### Structured Data (Schema.org)
+
+**LocalBusiness Schema:**
+
+- Business name, address, phone
+- Opening hours (Mon-Fri 8AM-6PM, Sat 9AM-1PM)
+- Service area (Queensland)
+- All 6 services listed
+
+**Organization Schema:**
+
+- Company details
+- Contact information
+- Founding date
+
+### Google Analytics
+
+Google Analytics is prepared but commented out. To enable:
+
+1. Get a GA4 tracking ID from Google Analytics
+2. Edit `frontend/index.html`
+3. Uncomment the GA script and replace `G-XXXXXXXXXX` with your ID
+
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+```
 
 ---
 
