@@ -87,21 +87,70 @@ npm install
 Create a `.env` file in the `backend/` directory:
 
 ```env
-# SMTP Configuration (for contact form emails)
-SMTP_HOST=smtp.your-email-provider.com
+# ===========================================
+# COOPER GAMING SERVICES - ENVIRONMENT CONFIG
+# ===========================================
+
+# Server Configuration
+PORT=5000
+NODE_ENV=production
+
+# ===========================================
+# SMTP EMAIL CONFIGURATION
+# ===========================================
+# The contact form sends emails via SMTP
+# You can use Gmail, Outlook, or any SMTP provider
+
+# Option 1: Gmail SMTP
+SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_SECURE=false
-SMTP_USER=your-email@domain.com
-SMTP_PASS=your-email-password
+SMTP_USER=your-gmail@gmail.com
+SMTP_PASS=your-app-password
 
-# Admin email (receives contact form submissions)
+# Option 2: Outlook/Office 365
+# SMTP_HOST=smtp.office365.com
+# SMTP_PORT=587
+# SMTP_SECURE=false
+
+# Option 3: Custom SMTP Server
+# SMTP_HOST=mail.yourdomain.com
+# SMTP_PORT=465
+# SMTP_SECURE=true
+
+# ===========================================
+# EMAIL RECIPIENTS
+# ===========================================
+# Admin receives all contact form submissions
 ADMIN_EMAIL=info@coopergamingservices.com
 
-# Frontend URL (for email templates)
+# ===========================================
+# FRONTEND URL
+# ===========================================
+# Used for CORS and email template links
 FRONTEND_URL=https://coopergamingservices.com
 ```
 
-**Important:** Replace the placeholder values with actual credentials.
+### Gmail App Password Setup
+
+If using Gmail, you need an **App Password** (not your regular password):
+
+1. Go to [Google Account Security](https://myaccount.google.com/security)
+2. Enable **2-Step Verification** if not already enabled
+3. Go to **App passwords** (under "Signing in to Google")
+4. Select "Mail" and "Other (Custom name)"
+5. Enter "Cooper Gaming Services" as the name
+6. Click **Generate**
+7. Copy the 16-character password and use it as `SMTP_PASS`
+
+### Important Notes
+
+- **No Database Required** - This application does NOT use a database
+- Contact form submissions are sent directly via email
+- No data is stored on the server
+- All form data goes to the admin email address
+
+**⚠️ Security:** Never commit `.env` files to git. The `.env.example` file shows the structure without real credentials.
 
 ---
 
