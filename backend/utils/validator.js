@@ -42,11 +42,11 @@ export const validateContactForm = [
       if (urlPattern.test(value)) {
         throw new Error('URLs and website links are not allowed.')
       }
-      
+
       // Block spam keywords (case-insensitive, specific phrases)
       const spamKeywords = [
         'seo service', 'mobile app development', 'virtual assistant service', 'va service',
-        'web development service', 'app development service', 'digital marketing service', 
+        'web development service', 'app development service', 'digital marketing service',
         'social media marketing', 'smm service', 'content writing service', 'copywriting service',
         'graphic design service', 'logo design service', 'website design service', 'web design service',
         'wordpress development', 'shopify store', 'ecommerce solution',
@@ -56,20 +56,20 @@ export const validateContactForm = [
         'cheap service', 'affordable price', 'best price guarantee', 'discount offer',
         'crypto trading', 'bitcoin investment', 'forex trading', 'investment opportunity'
       ]
-      
+
       const lowerValue = value.toLowerCase()
       const foundKeywords = spamKeywords.filter(keyword => lowerValue.includes(keyword))
-      
+
       if (foundKeywords.length > 0) {
         throw new Error('Your message contains prohibited keywords.')
       }
-      
+
       // Check for excessive caps
       const capsRatio = (value.match(/[A-Z]/g) || []).length / value.length
       if (capsRatio > 0.5 && value.length > 20) {
         throw new Error('Please avoid excessive use of capital letters.')
       }
-      
+
       return true
     }),
 ]

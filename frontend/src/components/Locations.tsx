@@ -35,15 +35,15 @@ const Locations = () => {
           <span className="section-tag">Service Areas</span>
           <h2 className="section-title">We Service All of Queensland</h2>
           <p className="section-description mx-auto" style={{ maxWidth: '700px' }}>
-            Our mobile technicians cover major metropolitan areas and regional Queensland, 
+            Our mobile technicians cover major metropolitan areas and regional Queensland,
             providing fast, reliable gaming and technology services wherever you need us.
           </p>
         </div>
 
         <div className="row g-4 mb-5">
           {locations.map((location, index) => (
-            <div 
-              className="col-lg-3 col-md-6" 
+            <div
+              className="col-lg-3 col-md-6"
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
@@ -80,7 +80,7 @@ const Locations = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          
+
           <div className="location-info-overlay">
             <div className="info-box">
               <h5>Head Office</h5>
@@ -102,7 +102,7 @@ const Locations = () => {
 
         <div className="text-center mt-4">
           <p className="text-muted">
-            <i className="bi bi-info-circle"></i> Can't find your location? 
+            <i className="bi bi-info-circle"></i> Can't find your location?
             <a href="#contact" className="ms-2">Contact us</a> to discuss service availability in your area.
           </p>
         </div>

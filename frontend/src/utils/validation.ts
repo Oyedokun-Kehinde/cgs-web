@@ -40,11 +40,11 @@ export const validateField = (name: string, value: string, _formData?: ContactFo
       }
       // Remove spaces and common phone separators
       const cleanedPhone = value.replace(/[\s\-\(\)]/g, '')
-      
+
       // Australian phone number validation
       // Accepts: 04XX XXX XXX, +61 4XX XXX XXX, 07 XXXX XXXX, etc.
       const phoneRegex = /^(\+?61|0)[2-478](?:[ -]?[0-9]){8}$/
-      
+
       if (!phoneRegex.test(cleanedPhone)) {
         return 'Please enter a valid Australian phone number'
       }
@@ -75,23 +75,23 @@ export const validateField = (name: string, value: string, _formData?: ContactFo
 
 export const validateForm = (formData: ContactFormData): { [key: string]: string } => {
   const errors: { [key: string]: string } = {}
-  
+
   const fields = ['name', 'email', 'phone', 'serviceType', 'message']
-  
+
   fields.forEach(field => {
     const error = validateField(field, formData[field], formData)
     if (error) {
       errors[field] = error
     }
   })
-  
+
   return errors
 }
 
 // Sanitize input to prevent XSS
 export const sanitizeInput = (input: string): string => {
   if (typeof input !== 'string') return input
-  
+
   return input
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -103,18 +103,18 @@ export const sanitizeInput = (input: string): string => {
 // Format phone number for display
 export const formatPhoneNumber = (phone: string): string => {
   const cleaned = phone.replace(/[\s\-\(\)]/g, '')
-  
+
   if (cleaned.startsWith('+61')) {
     return cleaned.replace(/(\+61)(\d{1})(\d{4})(\d{4})/, '$1 $2 $3 $4')
   }
-  
+
   if (cleaned.startsWith('04')) {
     return cleaned.replace(/(\d{4})(\d{3})(\d{3})/, '$1 $2 $3')
   }
-  
+
   if (cleaned.startsWith('0')) {
     return cleaned.replace(/(\d{2})(\d{4})(\d{4})/, '$1 $2 $3')
   }
-  
+
   return phone
 }

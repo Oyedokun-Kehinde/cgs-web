@@ -108,15 +108,15 @@ const Services = () => {
           <span className="section-tag">Our Services</span>
           <h2 className="section-title">Comprehensive Gaming & Technology Solutions</h2>
           <p className="section-description mx-auto" style={{ maxWidth: '700px' }}>
-            From gaming room design to retail IT support, we deliver complete technology services 
+            From gaming room design to retail IT support, we deliver complete technology services
             that keep your venue running smoothly and profitably.
           </p>
         </div>
 
         <div className="row g-4">
           {services.map((service, index) => (
-            <div 
-              className="col-lg-6" 
+            <div
+              className="col-lg-6"
               key={service.id}
               data-aos="fade-up"
               data-aos-delay={index * 100}
@@ -135,7 +135,7 @@ const Services = () => {
                 <div className="service-content">
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
-                  
+
                   <ul className="service-features">
                     {service.features.map((feature, idx) => (
                       <li key={idx}>
@@ -144,7 +144,7 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <a href="#contact" className="btn btn-primary mt-3">
                     Get Started
                   </a>
@@ -160,7 +160,7 @@ const Services = () => {
             <div className="col-lg-8">
               <h3>Need a Custom Solution?</h3>
               <p className="mb-0">
-                We understand every venue is unique. Contact us to discuss tailored 
+                We understand every venue is unique. Contact us to discuss tailored
                 gaming solutions designed specifically for your business needs.
               </p>
             </div>
