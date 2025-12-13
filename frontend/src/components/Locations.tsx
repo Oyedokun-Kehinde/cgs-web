@@ -71,7 +71,7 @@ const Locations = () => {
           <div className="map-placeholder">
             <iframe
               title="Cooper Gaming Services Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.2378629520494!2d153.02301831506208!3d-27.46974998289116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a045b9b9c3d%3A0x502a35af3de8660!2sBrisbane%20QLD%2C%20Australia!5e0!3m2!1sen!2sau!4v1234567890123!5m2!1sen!2sau"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57909.39675089747!2d152.28147713382342!3d-24.886473895391383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6bebb93f0664d9a3%3A0x400eef17f20d7c0!2sBundaberg%20QLD%204670!5e0!3m2!1sen!2sau!4v1765404675393!5m2!1sen!2sau"
               width="100%"
               height="450"
               style={{ border: 0 }}
@@ -86,7 +86,7 @@ const Locations = () => {
               <h5>Head Office</h5>
               <p>
                 <i className="bi bi-geo-alt"></i>
-                Brisbane, Queensland
+                Bundaberg, Queensland
               </p>
               <p>
                 <i className="bi bi-telephone"></i>
